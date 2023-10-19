@@ -1,4 +1,4 @@
-package com.myapplication
+package com.jesusdmedinac.compose.calculator
 
 import MainView
 import android.os.Bundle

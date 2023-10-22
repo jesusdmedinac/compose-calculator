@@ -1,5 +1,5 @@
 import androidx.compose.runtime.Composable
-import com.jesusdmedinac.compose.calculator.CalculatorApp
+import com.jesusdmedinac.compose.calculator.ComposeCalculatorApp
 
 @Composable
-fun MainView() = CalculatorApp()
+fun MainView() = ComposeCalculatorApp()

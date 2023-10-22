@@ -1,4 +1,4 @@
 import androidx.compose.ui.window.ComposeUIViewController
-import com.jesusdmedinac.compose.calculator.CalculatorApp
+import com.jesusdmedinac.compose.calculator.ComposeCalculatorApp
 
-fun MainViewController() = ComposeUIViewController { CalculatorApp() }
+fun MainViewController() = ComposeUIViewController { ComposeCalculatorApp() }

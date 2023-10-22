@@ -50,6 +50,8 @@ jobs:
         run: chmod +x gradlew
 
       - name: Execute Fastlane
-        run: bundle exec fastlane distribute firebase_cli_token:$FIREBASE_TOKEN
+        run: |
+          export DECODED_FIREBASE_TOKEN=$(echo ${{ secrets.FIREBASE_TOKEN }} | base64 --decode)
+          bundle exec fastlane distribute firebase_cli_token:$DECODED_FIREBASE_TOKEN
         env:
           KEYSTORE_RELEASE: ${{ secrets.FIREBASE_TOKEN }}

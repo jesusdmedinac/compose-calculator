@@ -21,6 +21,23 @@ platform :android do
     gradle(task: "test")
   end
 
+  desc "My awesome app"
+  lane :distribute do |options|
+    gradle(
+      task: 'bundle',
+      build_type: 'Release',
+    )
+    # build_android_app is a built-in fastlane action.
+    firebase_token = options[:firebase_cli_token]
+    release = firebase_app_distribution(
+      app: "1:16729881194:android:8fa0a8f6ff9d3778292813",
+      groups: "compose-calculator-testers",
+      android_artifact_type: "AAB",
+      android_artifact_path: "androidApp/build/outputs/bundle/release/androidApp-release.aab",
+      firebase_cli_token: firebase_token
+    )
+  end
+
   desc "Submit a new Beta Build to Crashlytics Beta"
   lane :internal do
     gradle(

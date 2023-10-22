@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "composecalculator-d0ac8",
+  "private_key_id": "c0cabf09660f6a328b7cfd0a03848775625db273",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCiA7hEekL0niAr\n8pbXu/hebpBxrhyftBlKkepeq3cEK17RkNpWdWSMSsekGJRpUUdDemsSLqBm0KOT\nlftfw00lLUTIE0OKLe6ouMoz4IGjvIgCXUKFBTZX/+g42xSbqca7Ee7Da8tDrMLC\nvnK5AVmcBv5pjMb7PJlSDhS39ZdQ4kbJ/N4k93BJ0fN8+299DM19cARNHYmRkrBc\nSMirvS8lpHrFjmly7u3eBic6xSid9OGvjxQ4y36Lj4u1msWIUcfwsq5w8BBuFNhs\nYzDXuGz/jIpmJsWCl39hjMFItFIzBSxkx2RsIGdIZ+xkD8TnyqPv+R8Xi7CucxWb\nxD8ki7oHAgMBAAECggEAQ3H9+0/UYMYVCYaPQhcH0bQAYLrFQry0TKVK5odF4A/4\nBJDjO9vZ9EdLLeZnniJOYupq+WI8tyCDADUPNPH2QxRBznKqirMNZ+KplogPH+0j\nx6wwPXUKhv7LGyQkw5qdVxIjjenpb+5TE8Q5uQe1WK1WqvUGft9eylh/SoesKuim\nSDD9ZOivSGciVNcUe8oyD5BeX+3/VOsuprYlXNbMef2VNZt93156gRuwZUqY84ob\nVCWKvR0ncOHRJiymS1ZNnjPaqrmbfAJae9gKCVL5xMp3RlSuwCXU7Rzq34sD3dsa\nrkaEFmBrZ6RtB68oxxISj7zCR8EV60jNRC/Ioy0JmQKBgQDQiPxADTPoSDrqU+no\nSeIZ3pkVQYdTMMiodb+lLEYvGkWI0zZoxd4eNqEpzigDondsJOWdevBgvEnIFnvI\njoZBAQi6XWelLMyC2g3uuwDJF59WhVLhA9RJybgkT3aJHTCbanItRfYPmfqCVwDW\nA3zO54y9YksdwZZRLeJYAlxiDwKBgQDG5A202l0H7Fxs61T0GVoF5nVUR2gSf0Lm\nt6w1Q+0fpjywgXXx6HQ5R+rk8+qdjUcmWoND9mCUUNWy9PdSEE3+M98S0xv2+w82\npacuKOzG7AUqwAwrDMEujl5x1Y/4UnErK45LnEJIB4hojaedLNagG7Bgq8kmpws4\nCBnsP3DAiQKBgAjzaEhjiK/WsdivA2I6EZ9ko5N6/ZD/jg1VCIXRca3B5ewqjLJQ\nk+keFSrTM3p8db3Jk6V/ymOMkWoqNOP14iNWJQbCzZkUZC7VpzVxB2aaQfeXv2fz\nHyCPrPy6AG+ANj7lgcMZtqcSx+LiUyHcgnXrEGpslqbPUWFoo8d9SnPXAoGAdFB0\nr5qwo2yYVN5/zU1yN1cisMod1At23aT24iO6bjLy9SqRBosyRTmI5qK7R66SuJxg\nfgN9Ud/ASis25FhCtHIzeDfb9+G1cPkJv1YRuvfWwbyUoSyRYZ/DHgGOc+QK6PtM\n+W0F2kgFf1eweZv6XKI00SRFvAQe7ILYXjBvyTkCgYEArkvVMKL7VNUL53Mq5GCQ\nej6eEOs6GykxNtJT1ph2Of74/qsfJLe3rMnI+I4aSAM3LteLq5DEX3XTqyLoyDcE\ntcjqHr+FTVo8kH2+kliAsO9w5O6kEXP9r850l0eXHzLI0derPbQJyF4QX59MZ4xj\nMaEA5VEas0F4GvdJjT28ZY8=\n-----END PRIVATE KEY-----\n",
+  "client_email": "fastlane-supply@composecalculator-d0ac8.iam.gserviceaccount.com",
+  "client_id": "110207840366711398710",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/fastlane-supply%40composecalculator-d0ac8.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

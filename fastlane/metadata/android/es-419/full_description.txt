@@ -1,0 +1,1 @@
+ComposeCalculator es una calculadora creada utilizando MAD. Además, Compose Multiplatform permite compilar la app en múltiples plataformas.

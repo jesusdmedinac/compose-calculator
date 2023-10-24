@@ -3,6 +3,9 @@ package com.jesusdmedinac.compose.calculator.ui.model
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import com.github.keelar.exprk.ExpressionException
+import com.github.keelar.exprk.Expressions
+import com.ionspin.kotlin.bignum.decimal.BigDecimal
 
 class CalculatorEngine {
     var state: CalculatorState by mutableStateOf(CalculatorState())
@@ -10,82 +13,61 @@ class CalculatorEngine {
 
     fun onKeypadClicked(keypad: Keypad) {
         when (keypad.type) {
-            KeypadType.NUMBER -> numberClicked(keypad)
-            KeypadType.OPERATOR -> operatorClicked(keypad)
+            KeypadType.NUMBER,
+            KeypadType.OPERATOR,
+            KeypadType.DECIMAL,
+            -> numberOperatorOrDecimalClicked(keypad)
+
             KeypadType.CLEAR -> clearClicked()
             KeypadType.EQUALS -> equalsClicked()
-            KeypadType.DECIMAL -> TODO()
             KeypadType.NEGATE -> TODO()
             KeypadType.PERCENT -> TODO()
         }
     }
 
-    private fun numberClicked(keypad: Keypad) {
-        if (!state.displayingNextValue && state.previousValue != 0.0) {
-            state.update {
-                it.copy(
-                    displayedValue = 0.0,
-                    displayingNextValue = true,
-                )
-            }
-        }
+    private fun numberOperatorOrDecimalClicked(keypad: Keypad) {
         state.update {
+            val displayedCalculation = it.displayedCalculation + keypad.label
+            val result = calculateResult(displayedCalculation)
             it.copy(
-                displayedValue = (it.displayedValue * 10) + keypad.label.toDouble(),
-            )
-        }
-    }
+                displayedCalculation = displayedCalculation,
+                displayedResult = when {
+                    result % 1 == BigDecimal.fromInt(0) ->
+                        result.toString().dropLast(2)
 
-    private fun operatorClicked(keypad: Keypad) {
-        if (state.operation != Operation.NONE) {
-            equalsClicked()
-        }
-        state.update {
-            it.copy(
-                previousValue = it.displayedValue,
-                operation = when (keypad) {
-                    Keypad.ADD -> Operation.ADD
-                    Keypad.SUBTRACT -> Operation.SUBTRACT
-                    Keypad.MULTIPLY -> Operation.MULTIPLY
-                    Keypad.DIVIDE -> Operation.DIVIDE
-                    else -> Operation.NONE
+                    else -> result.toString()
                 },
             )
         }
     }
 
     private fun clearClicked() {
-        if (state.displayedValue != 0.0) {
-            state.update {
-                it.copy(
-                    displayedValue = 0.0,
-                )
-            }
-        } else {
-            state.update {
-                it.copy(
-                    displayedValue = 0.0,
-                    previousValue = 0.0,
-                    displayingNextValue = false,
-                    operation = Operation.NONE,
-                )
-            }
-        }
+        state.update { CalculatorState() }
     }
+
+    private fun calculateResult(expression: String): BigDecimal =
+        try {
+            var useExpression = expression
+            if (expression.endsWith(".")) {
+                useExpression = expression.dropLast(1)
+                useExpression += "0."
+            }
+            Expressions().eval(useExpression)
+        } catch (e: ExpressionException) {
+            Expressions().eval(expression.dropLast(1))
+        }
 
     private fun equalsClicked() {
         state.update {
+            val result = calculateResult(it.displayedCalculation)
+
             it.copy(
-                displayedValue = when (it.operation) {
-                    Operation.ADD -> it.previousValue + it.displayedValue
-                    Operation.SUBTRACT -> it.previousValue - it.displayedValue
-                    Operation.MULTIPLY -> it.previousValue * it.displayedValue
-                    Operation.DIVIDE -> it.previousValue / it.displayedValue
-                    else -> it.displayedValue
+                displayedResult = when {
+                    result % 1 == BigDecimal.fromInt(0) ->
+                        result.toString().drop(1)
+
+                    else -> result.toString()
                 },
-                previousValue = 0.0,
-                displayingNextValue = false,
-                operation = Operation.NONE,
             )
         }
     }
@@ -98,9 +80,8 @@ class CalculatorEngine {
 }
 
 data class CalculatorState(
-    val displayedValue: Double = 0.0,
-    val previousValue: Double = 0.0,
-    val displayingNextValue: Boolean = false,
+    val displayedCalculation: String = "",
+    val displayedResult: String = "",
     val operation: Operation = Operation.NONE,
 )
 

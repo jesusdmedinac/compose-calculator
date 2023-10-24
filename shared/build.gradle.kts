@@ -26,6 +26,7 @@ kotlin {
                 api(compose.material3)
                 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
                 api(compose.components.resources)
+                implementation("com.ionspin.kotlin:bignum:0.3.8")
             }
         }
         val androidMain by getting {

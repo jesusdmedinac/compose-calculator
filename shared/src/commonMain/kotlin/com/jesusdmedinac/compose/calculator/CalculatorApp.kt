@@ -27,13 +27,13 @@ import com.jesusdmedinac.compose.calculator.ui.model.Keypad
 import com.jesusdmedinac.compose.calculator.ui.model.KeypadSize
 import com.jesusdmedinac.compose.calculator.ui.model.KeypadType
 import com.jesusdmedinac.compose.calculator.ui.model.Operation
-import kotlin.math.roundToInt
 
 @Composable
 fun ComposeCalculatorApp() {
     val calculatorEngine by remember { mutableStateOf(CalculatorEngine()) }
     val state = calculatorEngine.state
-    val displayedValue = state.displayedValue
+    val displayedCalculation = state.displayedCalculation
+    val displayedResult = state.displayedResult
     Scaffold(
         modifier = Modifier.fillMaxSize(),
     ) {
@@ -44,24 +44,30 @@ fun ComposeCalculatorApp() {
                     .fillMaxWidth(),
                 contentAlignment = Alignment.BottomEnd,
             ) {
-                val displayedValueAsString = with(displayedValue) {
-                    when {
-                        this % 1 == 0.0 -> {
-                            roundToInt()
-                        }
-
-                        else -> this
-                    }
-                }.toString()
-                Text(
-                    text = displayedValueAsString,
-                    modifier = Modifier,
-                    style = MaterialTheme.typography.displayLarge,
-                    textAlign = TextAlign.End,
-                    fontSize = MaterialTheme.typography.displayLarge.fontSize.run {
-                        this * 1.5f
-                    },
-                )
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth(),
+                    horizontalAlignment = Alignment.End,
+                ) {
+                    Text(
+                        text = displayedCalculation,
+                        modifier = Modifier,
+                        style = MaterialTheme.typography.displayLarge,
+                        textAlign = TextAlign.End,
+                        fontSize = MaterialTheme.typography.displayLarge.fontSize.run {
+                            this * 1.5f
+                        },
+                    )
+                    Text(
+                        text = displayedResult,
+                        modifier = Modifier,
+                        style = MaterialTheme.typography.displaySmall,
+                        textAlign = TextAlign.End,
+                        fontSize = MaterialTheme.typography.displaySmall.fontSize.run {
+                            this * 1.5f
+                        },
+                    )
+                }
             }
             ColumnOfButtons(
                 keypads = Keypad.values().toList(),
@@ -162,15 +168,7 @@ fun RowOfButtons(
                     contentAlignment = Alignment.Center,
                 ) {
                     Text(
-                        text = if (keypad == Keypad.CLEAR && (
-                                state.displayedValue != 0.0 ||
-                                    state.previousValue != 0.0
-                                )
-                        ) {
-                            "C"
-                        } else {
-                            keypad.label
-                        },
+                        text = keypad.label,
                         color = MaterialTheme.colorScheme.run {
                             if (operation != Operation.NONE && keypad.operation == operation) {
                                 outline

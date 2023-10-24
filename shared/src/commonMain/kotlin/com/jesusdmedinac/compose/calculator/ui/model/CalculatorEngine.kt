@@ -16,12 +16,12 @@ class CalculatorEngine {
             KeypadType.NUMBER,
             KeypadType.OPERATOR,
             KeypadType.DECIMAL,
+            KeypadType.PERCENT,
             -> numberOperatorOrDecimalClicked(keypad)
 
             KeypadType.CLEAR -> clearClicked()
             KeypadType.EQUALS -> equalsClicked()
-            KeypadType.NEGATE -> TODO()
-            KeypadType.PERCENT -> TODO()
+            KeypadType.UNDO -> undoClicked()
         }
     }
 
@@ -49,7 +49,8 @@ class CalculatorEngine {
         if (expression.endsWith("/") ||
             expression.endsWith("*") ||
             expression.endsWith("+") ||
-            expression.endsWith("-")
+            expression.endsWith("-") ||
+            expression.endsWith("%")
         ) {
             useExpression = expression.dropLast(1)
         }
@@ -64,6 +65,21 @@ class CalculatorEngine {
             val result = calculateResult(it.displayedCalculation)
 
             it.copy(
+                displayedCalculation = result.toStringExpanded(),
+                displayedResult = "",
+            )
+        }
+    }
+
+    private fun undoClicked() {
+        state.update {
+            if (it.displayedCalculation.isEmpty()) {
+                return@update it
+            }
+            val displayedCalculation = it.displayedCalculation.dropLast(1)
+            val result = calculateResult(displayedCalculation)
+            it.copy(
+                displayedCalculation = displayedCalculation,
                 displayedResult = result.toStringExpanded(),
             )
         }

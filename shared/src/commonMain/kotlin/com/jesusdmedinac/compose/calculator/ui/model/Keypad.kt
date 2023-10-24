@@ -7,7 +7,7 @@ enum class Keypad(
     val operation: Operation = Operation.NONE,
 ) {
     CLEAR("AC", KeypadType.CLEAR),
-    NEGATE("+/-", KeypadType.NEGATE),
+    UNDO("⌫", KeypadType.UNDO),
     PERCENT("%", KeypadType.PERCENT),
     DIVIDE("/", KeypadType.OPERATOR, operation = Operation.DIVIDE),
     SEVEN("7", KeypadType.NUMBER),

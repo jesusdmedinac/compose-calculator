@@ -4,8 +4,8 @@ enum class KeypadType {
     NUMBER,
     OPERATOR,
     CLEAR,
+    UNDO,
     EQUALS,
     DECIMAL,
-    NEGATE,
     PERCENT,
 }

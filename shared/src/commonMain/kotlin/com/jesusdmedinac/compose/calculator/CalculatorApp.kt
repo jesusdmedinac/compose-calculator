@@ -158,7 +158,7 @@ fun RowOfButtons(
                                         KeypadType.CLEAR -> tertiary
                                         KeypadType.EQUALS -> secondary
                                         KeypadType.DECIMAL -> primary
-                                        KeypadType.NEGATE -> tertiary
+                                        KeypadType.UNDO -> tertiary
                                         KeypadType.PERCENT -> tertiary
                                     }
                                 }
@@ -178,7 +178,7 @@ fun RowOfButtons(
                                     KeypadType.CLEAR -> onTertiary
                                     KeypadType.EQUALS -> onSecondary
                                     KeypadType.DECIMAL -> onPrimary
-                                    KeypadType.NEGATE -> onTertiary
+                                    KeypadType.UNDO -> onTertiary
                                     KeypadType.PERCENT -> onTertiary
                                 }
                             }

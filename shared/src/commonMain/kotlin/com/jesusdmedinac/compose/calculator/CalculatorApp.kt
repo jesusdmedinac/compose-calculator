@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -18,23 +17,26 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import com.jesusdmedinac.compose.calculator.ui.model.CalculatorEngine
 import com.jesusdmedinac.compose.calculator.ui.model.Keypad
 import com.jesusdmedinac.compose.calculator.ui.model.KeypadSize
 import com.jesusdmedinac.compose.calculator.ui.model.KeypadType
+import com.jesusdmedinac.compose.calculator.ui.model.Operation
+import kotlin.math.roundToInt
 
 @Composable
 fun ComposeCalculatorApp() {
+    val calculatorEngine by remember { mutableStateOf(CalculatorEngine()) }
+    val state = calculatorEngine.state
+    val displayedValue = state.displayedValue
     Scaffold(
         modifier = Modifier.fillMaxSize(),
     ) {
-        var displayValue by remember { mutableStateOf("0") }
-        var savedOperatorKeypad by remember { mutableStateOf<Keypad?>(null) }
         Column {
             Box(
                 modifier = Modifier
@@ -42,8 +44,17 @@ fun ComposeCalculatorApp() {
                     .fillMaxWidth(),
                 contentAlignment = Alignment.BottomEnd,
             ) {
+                val displayedValueAsString = with(displayedValue) {
+                    when {
+                        this % 1 == 0.0 -> {
+                            roundToInt()
+                        }
+
+                        else -> this
+                    }
+                }.toString()
                 Text(
-                    text = displayValue,
+                    text = displayedValueAsString,
                     modifier = Modifier,
                     style = MaterialTheme.typography.displayLarge,
                     textAlign = TextAlign.End,
@@ -54,96 +65,7 @@ fun ComposeCalculatorApp() {
             }
             ColumnOfButtons(
                 keypads = Keypad.values().toList(),
-                onKeypadClick = { keypad ->
-                    when (keypad.type) {
-                        KeypadType.NUMBER -> {
-                            if (savedOperatorKeypad != null) {
-                                when (savedOperatorKeypad) {
-                                    Keypad.DIVIDE -> {
-                                        displayValue =
-                                            (displayValue.toDouble() / keypad.label.toDouble()).toString()
-                                    }
-
-                                    Keypad.MULTIPLY -> {
-                                        displayValue =
-                                            (displayValue.toDouble() * keypad.label.toDouble()).toString()
-                                    }
-
-                                    Keypad.SUBTRACT -> {
-                                        displayValue =
-                                            (displayValue.toDouble() - keypad.label.toDouble()).toString()
-                                    }
-
-                                    Keypad.ADD -> {
-                                        displayValue =
-                                            (displayValue.toDouble() + keypad.label.toDouble()).toString()
-                                    }
-
-                                    else -> Unit
-                                }
-                            } else {
-                                displayValue = when (displayValue) {
-                                    "0" -> keypad.label
-                                    else -> displayValue + keypad.label
-                                }
-                            }
-                        }
-
-                        KeypadType.DECIMAL -> {
-                            if (!displayValue.contains(".")) {
-                                displayValue += keypad.label
-                            }
-                        }
-
-                        KeypadType.OPERATOR -> {
-                            if (displayValue == "0") return@ColumnOfButtons
-                            savedOperatorKeypad = keypad
-                        }
-
-                        KeypadType.PERCENT -> {
-                            displayValue = (displayValue.toDouble() / 100).toString()
-                        }
-
-                        KeypadType.EQUALS -> {
-                            when (savedOperatorKeypad) {
-                                Keypad.DIVIDE -> {
-                                    displayValue =
-                                        (displayValue.toDouble() / displayValue.toDouble()).toString()
-                                }
-
-                                Keypad.MULTIPLY -> {
-                                    displayValue =
-                                        (displayValue.toDouble() * displayValue.toDouble()).toString()
-                                }
-
-                                Keypad.SUBTRACT -> {
-                                    displayValue =
-                                        (displayValue.toDouble() - displayValue.toDouble()).toString()
-                                }
-
-                                Keypad.ADD -> {
-                                    displayValue =
-                                        (displayValue.toDouble() + displayValue.toDouble()).toString()
-                                }
-
-                                else -> Unit
-                            }
-                            savedOperatorKeypad = null
-                        }
-
-                        KeypadType.NEGATE -> {
-                            displayValue = (displayValue.toDouble() * -1).toString()
-                        }
-
-                        KeypadType.CLEAR -> {
-                            displayValue = "0"
-                            savedOperatorKeypad = null
-                        }
-                    }
-                    if (displayValue.endsWith(".0")) {
-                        displayValue = displayValue.substringBefore(".0")
-                    }
-                },
+                calculatorEngine = calculatorEngine,
             )
         }
     }
@@ -152,7 +74,7 @@ fun ComposeCalculatorApp() {
 @Composable
 fun ColumnScope.ColumnOfButtons(
     keypads: List<Keypad>,
-    onKeypadClick: (Keypad) -> Unit,
+    calculatorEngine: CalculatorEngine,
 ) {
     keypads
         .chunked(4)
@@ -160,7 +82,7 @@ fun ColumnScope.ColumnOfButtons(
             RowOfButtons(
                 modifier = Modifier.weight(1f),
                 buttonValues = rowOfButtons,
-                onKeypadClick = onKeypadClick,
+                calculatorEngine = calculatorEngine,
             )
         }
 }
@@ -169,8 +91,10 @@ fun ColumnScope.ColumnOfButtons(
 fun RowOfButtons(
     modifier: Modifier = Modifier,
     buttonValues: List<Keypad>,
-    onKeypadClick: (Keypad) -> Unit,
+    calculatorEngine: CalculatorEngine,
 ) {
+    val state = calculatorEngine.state
+    val operation = state.operation
     Row(
         modifier = modifier,
     ) {
@@ -187,7 +111,7 @@ fun RowOfButtons(
                         },
                     ),
                 onClick = {
-                    onKeypadClick(keypad)
+                    calculatorEngine.onKeypadClicked(keypad)
                 },
             ) {
                 Box(
@@ -214,33 +138,52 @@ fun RowOfButtons(
                                         .aspectRatio(1f)
                             },
                         )
-                        .clip(CircleShape)
+                        .clip(MaterialTheme.shapes.extraLarge)
                         .background(
                             MaterialTheme.colorScheme.run {
-                                when (keypad.type) {
-                                    KeypadType.NUMBER -> primary
-                                    KeypadType.OPERATOR -> secondary
-                                    KeypadType.CLEAR -> tertiary
-                                    KeypadType.EQUALS -> secondary
-                                    KeypadType.DECIMAL -> primary
-                                    KeypadType.NEGATE -> tertiary
-                                    KeypadType.PERCENT -> tertiary
+                                if (
+                                    operation != Operation.NONE &&
+                                    keypad.operation == operation
+                                ) {
+                                    outlineVariant
+                                } else {
+                                    when (keypad.type) {
+                                        KeypadType.NUMBER -> primary
+                                        KeypadType.OPERATOR -> secondary
+                                        KeypadType.CLEAR -> tertiary
+                                        KeypadType.EQUALS -> secondary
+                                        KeypadType.DECIMAL -> primary
+                                        KeypadType.NEGATE -> tertiary
+                                        KeypadType.PERCENT -> tertiary
+                                    }
                                 }
                             },
                         ),
                     contentAlignment = Alignment.Center,
                 ) {
                     Text(
-                        text = keypad.label,
+                        text = if (keypad == Keypad.CLEAR && (
+                                state.displayedValue != 0.0 ||
+                                    state.previousValue != 0.0
+                                )
+                        ) {
+                            "C"
+                        } else {
+                            keypad.label
+                        },
                         color = MaterialTheme.colorScheme.run {
-                            when (keypad.type) {
-                                KeypadType.NUMBER -> onPrimary
-                                KeypadType.OPERATOR -> onSecondary
-                                KeypadType.CLEAR -> onTertiary
-                                KeypadType.EQUALS -> onSecondary
-                                KeypadType.DECIMAL -> onPrimary
-                                KeypadType.NEGATE -> onTertiary
-                                KeypadType.PERCENT -> onTertiary
+                            if (operation != Operation.NONE && keypad.operation == operation) {
+                                outline
+                            } else {
+                                when (keypad.type) {
+                                    KeypadType.NUMBER -> onPrimary
+                                    KeypadType.OPERATOR -> onSecondary
+                                    KeypadType.CLEAR -> onTertiary
+                                    KeypadType.EQUALS -> onSecondary
+                                    KeypadType.DECIMAL -> onPrimary
+                                    KeypadType.NEGATE -> onTertiary
+                                    KeypadType.PERCENT -> onTertiary
+                                }
                             }
                         },
                         fontWeight = FontWeight.Black,

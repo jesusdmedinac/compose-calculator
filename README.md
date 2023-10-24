@@ -125,7 +125,7 @@ To run the application on an Android emulator:
 
    <img src="readme_images/run_on_android.png" height="60px">
 
-   <img src="readme_images/android_app_running.png" height="512px">
+   <img src="readme_images/android_app_running.png" height="1024px">
 
 <details>
   <summary>Alternatively, use Gradle</summary>
@@ -153,7 +153,7 @@ configuration:
 
 4. The `iosApp` run configuration is now available. Click **Run** next to your virtual device:
 
-<img src="readme_images/ios_app_running.png" height="512px">
+<img src="readme_images/ios_app_running.png" height="1024px">
 
 #### Running on a real device
 

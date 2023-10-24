@@ -3,9 +3,9 @@ package com.jesusdmedinac.compose.calculator.ui.model
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
-import com.github.keelar.exprk.ExpressionException
 import com.github.keelar.exprk.Expressions
 import com.ionspin.kotlin.bignum.decimal.BigDecimal
+import com.ionspin.kotlin.bignum.decimal.RoundingMode
 
 class CalculatorEngine {
     var state: CalculatorState by mutableStateOf(CalculatorState())
@@ -40,17 +40,24 @@ class CalculatorEngine {
         state.update { CalculatorState() }
     }
 
-    private fun calculateResult(expression: String): BigDecimal =
-        try {
-            var useExpression = expression
-            if (expression.endsWith(".")) {
-                useExpression = expression.dropLast(1)
-                useExpression += "0."
-            }
-            Expressions().eval(useExpression)
-        } catch (e: ExpressionException) {
-            Expressions().eval(expression.dropLast(1))
+    private fun calculateResult(expression: String): BigDecimal = run {
+        var useExpression = expression
+        if (expression.endsWith(".")) {
+            useExpression = expression.dropLast(1)
+            useExpression += "0."
         }
+        if (expression.endsWith("/") ||
+            expression.endsWith("*") ||
+            expression.endsWith("+") ||
+            expression.endsWith("-")
+        ) {
+            useExpression = expression.dropLast(1)
+        }
+        Expressions()
+            .setPrecision(10)
+            .setRoundingMode(RoundingMode.ROUND_HALF_AWAY_FROM_ZERO)
+            .eval(useExpression)
+    }
 
     private fun equalsClicked() {
         state.update {

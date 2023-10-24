@@ -41,6 +41,9 @@ class CalculatorEngine {
     }
 
     private fun calculateResult(expression: String): BigDecimal = run {
+        if (expression.isEmpty()) {
+            return@run BigDecimal.ZERO
+        }
         var useExpression = expression
         if (expression.endsWith(".")) {
             useExpression = expression.dropLast(1)

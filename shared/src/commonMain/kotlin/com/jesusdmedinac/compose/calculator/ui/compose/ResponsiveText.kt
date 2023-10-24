@@ -16,8 +16,11 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.TextUnit
+import androidx.compose.ui.unit.max
+import androidx.compose.ui.unit.sp
 
 private const val TEXT_SCALE_REDUCTION_INTERVAL = 0.9f
+private const val TEXT_SCALE_INCREMENT_INTERVAL = 1.1f
 
 @Composable
 fun ResponsiveText(
@@ -30,6 +33,7 @@ fun ResponsiveText(
     maxLines: Int = 1,
 ) {
     var textSize by remember { mutableStateOf(targetTextSizeHeight) }
+    var textLength by remember { mutableStateOf(text.length) }
 
     Text(
         modifier = modifier,
@@ -48,7 +52,13 @@ fun ResponsiveText(
 
             if (textLayoutResult.isLineEllipsized(maxCurrentLineIndex)) {
                 textSize = textSize.times(TEXT_SCALE_REDUCTION_INTERVAL)
+            } else if (textLength - text.length == 1) {
+                textSize = kotlin.math.min(
+                    textSize.times(TEXT_SCALE_INCREMENT_INTERVAL).value,
+                    textStyle.fontSize.value,
+                ).sp
             }
+            textLength = text.length
         },
     )
 }

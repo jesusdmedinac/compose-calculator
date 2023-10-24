@@ -31,12 +31,7 @@ class CalculatorEngine {
             val result = calculateResult(displayedCalculation)
             it.copy(
                 displayedCalculation = displayedCalculation,
-                displayedResult = when {
-                    result % 1 == BigDecimal.fromInt(0) ->
-                        result.toString().dropLast(2)
-
-                    else -> result.toString()
-                },
+                displayedResult = result.toStringExpanded(),
             )
         }
     }
@@ -62,12 +57,7 @@ class CalculatorEngine {
             val result = calculateResult(it.displayedCalculation)
 
             it.copy(
-                displayedResult = when {
-                    result % 1 == BigDecimal.fromInt(0) ->
-                        result.toString().drop(1)
-
-                    else -> result.toString()
-                },
+                displayedResult = result.toStringExpanded(),
             )
         }
     }

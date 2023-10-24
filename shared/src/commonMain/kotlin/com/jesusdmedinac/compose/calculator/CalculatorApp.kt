@@ -1,10 +1,12 @@
 package com.jesusdmedinac.compose.calculator
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
@@ -22,6 +24,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import com.jesusdmedinac.compose.calculator.ui.compose.ResponsiveText
 import com.jesusdmedinac.compose.calculator.ui.model.CalculatorEngine
 import com.jesusdmedinac.compose.calculator.ui.model.Keypad
 import com.jesusdmedinac.compose.calculator.ui.model.KeypadSize
@@ -46,26 +49,23 @@ fun ComposeCalculatorApp() {
             ) {
                 Column(
                     modifier = Modifier
-                        .fillMaxWidth(),
+                        .fillMaxWidth()
+                        .fillMaxHeight(),
                     horizontalAlignment = Alignment.End,
+                    verticalArrangement = Arrangement.SpaceEvenly,
                 ) {
-                    Text(
+                    ResponsiveText(
                         text = displayedCalculation,
                         modifier = Modifier,
-                        style = MaterialTheme.typography.displayLarge,
+                        textStyle = MaterialTheme.typography.displayLarge,
                         textAlign = TextAlign.End,
-                        fontSize = MaterialTheme.typography.displayLarge.fontSize.run {
-                            this * 1.5f
-                        },
                     )
-                    Text(
+                    ResponsiveText(
                         text = displayedResult,
                         modifier = Modifier,
-                        style = MaterialTheme.typography.displaySmall,
+                        textStyle = MaterialTheme.typography.displaySmall,
                         textAlign = TextAlign.End,
-                        fontSize = MaterialTheme.typography.displaySmall.fontSize.run {
-                            this * 1.5f
-                        },
+                        color = MaterialTheme.colorScheme.outline,
                     )
                 }
             }

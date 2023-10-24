@@ -26,7 +26,6 @@ import androidx.compose.ui.text.style.TextAlign
 import com.jesusdmedinac.compose.calculator.ui.compose.ResponsiveText
 import com.jesusdmedinac.compose.calculator.ui.model.CalculatorEngine
 import com.jesusdmedinac.compose.calculator.ui.model.Keypad
-import com.jesusdmedinac.compose.calculator.ui.model.KeypadSize
 import com.jesusdmedinac.compose.calculator.ui.model.KeypadType
 import com.jesusdmedinac.compose.calculator.ui.model.Operation
 
@@ -107,42 +106,15 @@ fun RowOfButtons(
             IconButton(
                 modifier = Modifier
                     .fillMaxHeight()
-                    .weight(
-                        when (keypad.size) {
-                            KeypadSize.NORMAL -> 1f
-                            KeypadSize.DOUBLE_WIDE -> 2f
-                            KeypadSize.DOUBLE_TALL -> 2f
-                            KeypadSize.DOUBLE_WIDE_TALL -> 4f
-                        },
-                    ),
+                    .weight(1f),
                 onClick = {
                     calculatorEngine.onKeypadClicked(keypad)
                 },
             ) {
                 Box(
                     modifier = Modifier
-                        .then(
-                            when (keypad.size) {
-                                KeypadSize.NORMAL ->
-                                    Modifier
-                                        .fillMaxSize(0.8f)
-                                        .aspectRatio(1f)
-
-                                KeypadSize.DOUBLE_WIDE ->
-                                    Modifier
-                                        .fillMaxWidth(0.9f)
-                                        .fillMaxHeight(0.8f)
-
-                                KeypadSize.DOUBLE_TALL ->
-                                    Modifier
-                                        .aspectRatio(1f)
-
-                                KeypadSize.DOUBLE_WIDE_TALL ->
-                                    Modifier
-                                        .fillMaxWidth(0.8f)
-                                        .aspectRatio(1f)
-                            },
-                        )
+                        .fillMaxSize(0.8f)
+                        .aspectRatio(1f)
                         .clip(MaterialTheme.shapes.extraLarge)
                         .background(
                             MaterialTheme.colorScheme.run {
@@ -153,13 +125,12 @@ fun RowOfButtons(
                                     outlineVariant
                                 } else {
                                     when (keypad.type) {
-                                        KeypadType.NUMBER -> primary
-                                        KeypadType.OPERATOR -> secondary
                                         KeypadType.CLEAR -> tertiary
+                                        KeypadType.OPERATOR -> secondary
+                                        KeypadType.NUMBER -> primary
                                         KeypadType.EQUALS -> secondary
                                         KeypadType.DECIMAL -> primary
-                                        KeypadType.UNDO -> tertiary
-                                        KeypadType.PERCENT -> tertiary
+                                        KeypadType.UNDO -> primary
                                     }
                                 }
                             },
@@ -173,13 +144,12 @@ fun RowOfButtons(
                                 outline
                             } else {
                                 when (keypad.type) {
-                                    KeypadType.NUMBER -> onPrimary
-                                    KeypadType.OPERATOR -> onSecondary
                                     KeypadType.CLEAR -> onTertiary
+                                    KeypadType.OPERATOR -> onSecondary
+                                    KeypadType.NUMBER -> onPrimary
                                     KeypadType.EQUALS -> onSecondary
                                     KeypadType.DECIMAL -> onPrimary
-                                    KeypadType.UNDO -> onTertiary
-                                    KeypadType.PERCENT -> onTertiary
+                                    KeypadType.UNDO -> onPrimary
                                 }
                             }
                         },

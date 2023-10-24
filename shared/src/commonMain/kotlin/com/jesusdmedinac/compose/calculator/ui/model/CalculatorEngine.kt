@@ -3,6 +3,7 @@ package com.jesusdmedinac.compose.calculator.ui.model
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import com.github.keelar.exprk.ExpressionException
 import com.github.keelar.exprk.Expressions
 import com.ionspin.kotlin.bignum.decimal.BigDecimal
 import com.ionspin.kotlin.bignum.decimal.RoundingMode
@@ -16,7 +17,6 @@ class CalculatorEngine {
             KeypadType.NUMBER,
             KeypadType.OPERATOR,
             KeypadType.DECIMAL,
-            KeypadType.PERCENT,
             -> numberOperatorOrDecimalClicked(keypad)
 
             KeypadType.CLEAR -> clearClicked()
@@ -27,7 +27,24 @@ class CalculatorEngine {
 
     private fun numberOperatorOrDecimalClicked(keypad: Keypad) {
         state.update {
-            val displayedCalculation = it.displayedCalculation + keypad.label
+            println("it.displayedCalculation: ${it.displayedCalculation}")
+            val displayedCalculation = with(it.displayedCalculation) {
+                this + when {
+                    keypad == Keypad.PARENTHESIS &&
+                        hasOpenedParenthesis() &&
+                        lastCharIsNumber() -> ")"
+
+                    keypad == Keypad.PARENTHESIS &&
+                        hasOpenedParenthesis() &&
+                        !lastCharIsNumber() -> "("
+
+                    keypad == Keypad.PARENTHESIS &&
+                        !hasOpenedParenthesis() -> "("
+
+                    else -> keypad.label
+                }
+            }
+            println("displayedCalculation: $displayedCalculation")
             val result = calculateResult(displayedCalculation)
             it.copy(
                 displayedCalculation = displayedCalculation,
@@ -35,6 +52,10 @@ class CalculatorEngine {
             )
         }
     }
+
+    private fun String.hasOpenedParenthesis() = count { it == '(' } > count { it == ')' }
+
+    private fun String.lastCharIsNumber() = lastOrNull()?.isDigit() == true
 
     private fun clearClicked() {
         state.update { CalculatorState() }
@@ -57,10 +78,22 @@ class CalculatorEngine {
         ) {
             useExpression = expression.dropLast(1)
         }
-        Expressions()
-            .setPrecision(10)
-            .setRoundingMode(RoundingMode.ROUND_HALF_AWAY_FROM_ZERO)
-            .eval(useExpression)
+        try {
+            Expressions()
+                .setPrecision(10)
+                .setRoundingMode(RoundingMode.ROUND_HALF_AWAY_FROM_ZERO)
+                .eval(useExpression)
+        } catch (e: ExpressionException) {
+            if (e.message?.startsWith("Expected end of expression") == true) {
+                useExpression += ")"
+                Expressions()
+                    .setPrecision(10)
+                    .setRoundingMode(RoundingMode.ROUND_HALF_AWAY_FROM_ZERO)
+                    .eval(useExpression)
+            } else {
+                BigDecimal.ZERO
+            }
+        }
     }
 
     private fun equalsClicked() {

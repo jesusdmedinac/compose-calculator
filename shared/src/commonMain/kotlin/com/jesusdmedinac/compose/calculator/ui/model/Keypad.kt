@@ -3,13 +3,13 @@ package com.jesusdmedinac.compose.calculator.ui.model
 enum class Keypad(
     val label: String,
     val type: KeypadType,
-    val size: KeypadSize = KeypadSize.NORMAL,
     val operation: Operation = Operation.NONE,
+    val value: String = label,
 ) {
     CLEAR("AC", KeypadType.CLEAR),
-    UNDO("⌫", KeypadType.UNDO),
-    PERCENT("%", KeypadType.PERCENT),
-    DIVIDE("/", KeypadType.OPERATOR, operation = Operation.DIVIDE),
+    PARENTHESIS("( )", KeypadType.OPERATOR, value = "()"),
+    PERCENT("%", KeypadType.OPERATOR),
+    DIVIDE("÷", KeypadType.OPERATOR, operation = Operation.DIVIDE, value = "/"),
     SEVEN("7", KeypadType.NUMBER),
     EIGHT("8", KeypadType.NUMBER),
     NINE("9", KeypadType.NUMBER),
@@ -22,7 +22,8 @@ enum class Keypad(
     TWO("2", KeypadType.NUMBER),
     THREE("3", KeypadType.NUMBER),
     ADD("+", KeypadType.OPERATOR, operation = Operation.ADD),
-    ZERO("0", KeypadType.NUMBER, KeypadSize.DOUBLE_WIDE),
+    ZERO("0", KeypadType.NUMBER),
     DECIMAL(".", KeypadType.DECIMAL),
+    UNDO("⌫", KeypadType.UNDO),
     EQUALS("=", KeypadType.EQUALS),
 }

@@ -1,11 +1,10 @@
 package com.jesusdmedinac.compose.calculator.ui.model
 
 enum class KeypadType {
-    NUMBER,
-    OPERATOR,
     CLEAR,
+    OPERATOR,
+    NUMBER,
     UNDO,
     EQUALS,
     DECIMAL,
-    PERCENT,
 }

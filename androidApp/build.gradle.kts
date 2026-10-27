@@ -29,6 +29,7 @@ android {
     namespace = "com.jesusdmedinac.compose.calculator"
 
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
+    sourceSets["main"].assets.srcDirs("src/androidMain/assets")
 
     defaultConfig {
         applicationId = "com.jesusdmedinac.compose.calculator"

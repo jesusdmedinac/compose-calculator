@@ -10,6 +10,25 @@ build/
 iosApp/iosApp.xcworkspace/*
 iosApp/iosApp.xcodeproj/*
 !iosApp/iosApp.xcodeproj/project.pbxproj
+# Keystore & Signing Secrets
 keystore.properties
-androidApp/keystore/compose-calculator-keystore.jks
+*.jks
+*.keystore
+androidApp/keystore/
+
+# Google Cloud & Fastlane Service Account Keys
+*-key.json
+fastlane/*.json
+iosApp/fastlane/*.json
+
+# Android Developer Verification Tokens
+adi-registration.properties
+assets/adi-registration.properties
+
+# Environment variables
+.env
+.env.*
+*.env
+
+# Cloudflare & Tooling
 .wrangler/

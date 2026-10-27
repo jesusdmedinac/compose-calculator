@@ -12,3 +12,4 @@ iosApp/iosApp.xcodeproj/*
 !iosApp/iosApp.xcodeproj/project.pbxproj
 keystore.properties
 androidApp/keystore/compose-calculator-keystore.jks
+.wrangler/

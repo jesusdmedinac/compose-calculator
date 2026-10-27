@@ -34,8 +34,8 @@ android {
         applicationId = "com.jesusdmedinac.compose.calculator"
         minSdk = (findProperty("android.minSdk") as String).toInt()
         targetSdk = (findProperty("android.targetSdk") as String).toInt()
-        versionCode = 1000007
-        versionName = "1.0"
+        versionCode = 1000008
+        versionName = "1.0.1"
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17

@@ -1,0 +1,18 @@
+A straightforward, fast, and distraction-free calculator.
+
+Designed for everyday math without pop-up ads, laggy interfaces, or unnecessary permissions.
+
+Why Choose Compose Calculator?
+
+• Zero ads, zero sign-ups: No banners blocking your buttons, no popups, and no accounts required. Open the app and calculate.
+• 100% offline & private: Never asks for camera, contacts, storage, or location access. Every calculation runs locally in your device memory.
+• Exact decimal precision: Avoids standard floating-point rounding errors (like 0.1 + 0.2) by using high-precision decimal arithmetic.
+• Clean & modern design: Built with Material You (Material 3) styling, comfortable touch targets, full edge-to-edge support, and seamless dark mode.
+• Daily essentials: Addition, subtraction, multiplication, division, percentages, smart automatic parenthesis balancing, and undo button.
+• Lightweight: Minimal app size with zero background battery drain.
+
+Open Source
+Built using Kotlin Multiplatform and Compose Multiplatform. Clean, transparent, and open source on GitHub.
+
+Have feedback or feature requests? Contact jesus.daniel.medina.cruz@gmail.com or visit the GitHub repository:
+https://github.com/jesusdmedinac/compose-calculator

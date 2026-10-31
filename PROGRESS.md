@@ -23,5 +23,5 @@ Este archivo actúa como tablero central y living roadmap para la campaña de pu
 ---
 
 ## Feature 4: Campaña de Difusión y Lanzamiento en Redes Sociales (#4)
-- [ ] Scenario: Creación de hilo de lanzamiento técnico en X/Twitter (`docs/features/04_social_launch_campaign.feature:6`)
-- [ ] Scenario: Publicación de caso de estudio / carrusel en LinkedIn (`docs/features/04_social_launch_campaign.feature:14`)
+- [x] Scenario: Creación de hilo de lanzamiento técnico en X/Twitter (`docs/features/04_social_launch_campaign.feature:6`)
+- [x] Scenario: Publicación de caso de estudio / carrusel en LinkedIn (`docs/features/04_social_launch_campaign.feature:14`)

@@ -11,8 +11,8 @@ Este archivo actúa como tablero central y living roadmap para la campaña de pu
 ---
 
 ## Feature 2: Diseño y Producción de Creativos Visuales de Tienda (#2)
-- [ ] Scenario: Creación del Gráfico de Funciones (Feature Graphic 1024x500) (`docs/features/02_store_visual_assets.feature:6`)
-- [ ] Scenario: Diseño de capturas de pantalla promocionales para móviles (`docs/features/02_store_visual_assets.feature:13`)
+- [x] Scenario: Creación del Gráfico de Funciones (Feature Graphic 1024x500) (`docs/features/02_store_visual_assets.feature:6`)
+- [x] Scenario: Diseño de capturas de pantalla promocionales para móviles (`docs/features/02_store_visual_assets.feature:13`)
 
 ---
 

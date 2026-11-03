@@ -1,0 +1,8 @@
+# Store screenshots for Google Play. Run with `bundle exec fastlane android screenshots`.
+app_package_name("com.jesusdmedinac.compose.calculator")
+app_apk_path("androidApp/build/outputs/apk/debug/androidApp-debug.apk")
+tests_apk_path("androidApp/build/outputs/apk/androidTest/debug/androidApp-debug-androidTest.apk")
+use_tests_in_classes(["com.jesusdmedinac.compose.calculator.StoreScreenshotsTest"])
+locales(["es-419", "en-US"])
+clear_previous_screenshots(true)
+use_timestamp_suffix(false)

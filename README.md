@@ -129,6 +129,16 @@ The script checks the package name, target SDK, version, minimum SDK and signatu
 [GOOGLE_PLAY_GUIDE.md](GOOGLE_PLAY_GUIDE.md) for the full publishing playbook. Store texts,
 release notes and images are in `fastlane/metadata/android`.
 
+The phone screenshots come from `StoreScreenshotsTest` in `androidApp/src/androidInstrumentedTest`.
+To regenerate them on a connected device or emulator, run:
+
+```bash
+bundle exec fastlane android screenshots serial:<adb-serial>
+```
+
+The lane captures at 1080×1920 (Play rejects screenshots longer than twice their width) and then
+restores the device's screen size, density and dark mode.
+
 > **Warning**
 > The `Android prod CI` workflow builds and uploads to the Play internal track on every push to
 > `main` (`bundle exec fastlane internal`). Bump `versionCode` in `androidApp/build.gradle.kts`

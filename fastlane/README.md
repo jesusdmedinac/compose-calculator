@@ -39,6 +39,14 @@ My awesome app
 
 Submit a new Beta Build to Crashlytics Beta
 
+### android screenshots
+
+```sh
+[bundle exec] fastlane android screenshots
+```
+
+Captures the Play Store phone screenshots on a connected device or emulator (serial:<adb serial> picks one)
+
 ----
 
 This README.md is auto-generated and will be re-generated every time [_fastlane_](https://fastlane.tools) is run.

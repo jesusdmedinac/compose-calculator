@@ -27,6 +27,7 @@ kotlin {
                 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
                 api(compose.components.resources)
                 implementation("com.ionspin.kotlin:bignum:0.3.8")
+                api("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
             }
         }
         val androidMain by getting {

@@ -1,16 +1,17 @@
 package com.jesusdmedinac.compose.calculator.ui.model
 
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.setValue
 import com.github.keelar.exprk.ExpressionException
 import com.github.keelar.exprk.Expressions
 import com.ionspin.kotlin.bignum.decimal.BigDecimal
 import com.ionspin.kotlin.bignum.decimal.RoundingMode
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
 
 class CalculatorEngine {
-    var state: CalculatorState by mutableStateOf(CalculatorState())
-        private set
+    private val _state = MutableStateFlow(CalculatorState())
+    val state: StateFlow<CalculatorState> = _state.asStateFlow()
 
     fun onKeypadClicked(keypad: Keypad) {
         when (keypad.type) {
@@ -26,7 +27,7 @@ class CalculatorEngine {
     }
 
     private fun numberOperatorOrDecimalClicked(keypad: Keypad) {
-        state.update {
+        _state.update {
             val displayedCalculation = with(it.displayedCalculation) {
                 this + when {
                     keypad == Keypad.PARENTHESIS &&
@@ -57,7 +58,7 @@ class CalculatorEngine {
     private fun String.lastCharIsNumber() = lastOrNull()?.isDigit() == true
 
     private fun clearClicked() {
-        state.update { CalculatorState(lastCalculation = it.lastCalculation) }
+        _state.update { CalculatorState(lastCalculation = it.lastCalculation) }
     }
 
     private fun calculateResult(displayedExpression: String): BigDecimal = run {
@@ -99,7 +100,7 @@ class CalculatorEngine {
     }
 
     private fun equalsClicked() {
-        state.update {
+        _state.update {
             if (it.displayedCalculation.isEmpty()) {
                 return@update it
             }
@@ -115,7 +116,7 @@ class CalculatorEngine {
     }
 
     private fun undoClicked() {
-        state.update {
+        _state.update {
             if (it.displayedCalculation.isEmpty()) {
                 return@update it
             }
@@ -127,12 +128,6 @@ class CalculatorEngine {
                 operation = Operation.NONE,
             )
         }
-    }
-
-    private fun CalculatorState.update(
-        reducer: (CalculatorState) -> CalculatorState,
-    ) {
-        state = reducer(this)
     }
 }
 

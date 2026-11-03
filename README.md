@@ -150,6 +150,20 @@ Archive and export the app from Xcode (**Product → Archive**, then **Distribut
 Connect**), and upload the `.ipa` with Xcode or Transporter. App Store listing texts are in
 `iosApp/fastlane/metadata`.
 
+The App Store screenshots come from `StoreScreenshotsUITests` in `iosApp/iosAppUITests`. fastlane
+`snapshot` only drives simulators, so the lane runs the UI tests on a connected iPhone, exports
+the screenshots they attach and scales them to each App Store size: `6.1_*.png` (1179×2556, for
+the 6.1" and 6.3" slot) and `6.5_*.png` (1284×2778). `bundle exec fastlane ios export_screenshots`
+re-exports the last run without the iPhone.
+
+```bash
+cd iosApp && bundle exec fastlane ios screenshots udid:<device-id>
+```
+
+On the iPhone, turn on **Settings → Developer → Enable UI Automation** and **Do Not Disturb**, and
+keep the screen unlocked and on while it runs. Otherwise the screenshots come out black or show
+notifications. The screenshots keep the device's real status bar.
+
 ## Privacy
 
 The app collects no data. The privacy policy is published at

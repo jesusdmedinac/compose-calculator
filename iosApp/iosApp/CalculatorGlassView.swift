@@ -71,6 +71,9 @@ struct CalculatorGlassView: View {
             }
             Text(mainText)
                 .font(.system(size: 96, weight: .light))
+                // Long results such as 888888881201872 need to shrink further than the
+                // rest of the display to fit every digit.
+                .minimumScaleFactor(0.3)
                 .foregroundStyle(.white)
                 .contentTransition(.numericText())
                 .animation(.snappy, value: mainText)

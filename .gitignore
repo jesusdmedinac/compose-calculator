@@ -10,6 +10,7 @@ build/
 iosApp/iosApp.xcworkspace/*
 iosApp/iosApp.xcodeproj/*
 !iosApp/iosApp.xcodeproj/project.pbxproj
+!iosApp/iosApp.xcodeproj/xcshareddata/
 # Keystore & Signing Secrets
 keystore.properties
 *.jks

@@ -16,8 +16,54 @@
 default_platform(:ios)
 
 platform :ios do
-  desc "Description of what the lane does"
-  lane :custom_lane do
-    # add actions here: https://docs.fastlane.tools/actions
+  desc "Captures the App Store screenshots on a connected iPhone (udid:<device id>)"
+  lane :screenshots do |options|
+    udid = options[:udid] || UI.user_error!("Pass udid:<device id> from `xcrun devicectl list devices`")
+    results = File.expand_path("../build/screenshots", __dir__)
+    FileUtils.rm_rf(results)
+
+    # snapshot (and run_tests in this fastlane version) only drive simulators, so run
+    # the UI tests on the device and pull the screenshots they attach out of the result bundle.
+    sh("xcodebuild", "test",
+       "-project", File.expand_path("../iosApp.xcodeproj", __dir__),
+       "-scheme", "iosAppScreenshots",
+       "-destination", "id=#{udid}",
+       "-only-testing:iosAppUITests/StoreScreenshotsUITests",
+       "-resultBundlePath", "#{results}/tests.xcresult",
+       "-allowProvisioningUpdates")
+    export_screenshots
+  end
+
+  # App Store Connect only takes exact sizes per display slot. iPhone 13 Pro shots
+  # (1170x2532) scale to these with under 0.2% change in aspect ratio.
+  SCREENSHOT_SIZES = {
+    "6.1" => [1179, 2556], # iPhone with Dynamic Island, medium display (6.1"/6.3")
+    "6.5" => [1284, 2778],
+  }.freeze
+
+  desc "Exports the screenshots from the last `screenshots` run in every App Store size"
+  lane :export_screenshots do
+    results = File.expand_path("../build/screenshots", __dir__)
+    attachments = "#{results}/attachments"
+    FileUtils.rm_rf(attachments)
+    sh("xcrun", "xcresulttool", "export", "attachments",
+       "--path", "#{results}/tests.xcresult", "--output-path", attachments)
+
+    manifest = JSON.parse(File.read("#{attachments}/manifest.json"))
+    shots = manifest.flat_map { |test| test["attachments"] }
+    UI.user_error!("No screenshots were attached") if shots.empty?
+    ["es-MX", "en-US"].each do |language|
+      folder = File.expand_path("screenshots/#{language}", __dir__)
+      FileUtils.rm_rf(folder)
+      FileUtils.mkdir_p(folder)
+      shots.each do |shot|
+        name = shot["suggestedHumanReadableName"][/^\d+_[a-z]+(?:_[a-z]+)*/]
+        SCREENSHOT_SIZES.each do |display, (width, height)|
+          target = "#{folder}/#{display}_#{name}.png"
+          FileUtils.cp("#{attachments}/#{shot["exportedFileName"]}", target)
+          sh("sips", "-z", height.to_s, width.to_s, target, log: false)
+        end
+      end
+    end
   end
 end

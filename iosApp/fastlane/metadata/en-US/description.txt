@@ -1,0 +1,13 @@
+A straightforward, fast, distraction-free calculator built for iPhone.
+
+Liquid Glass keys that respond to your touch, digits that roll as they change, and a background in the app's colors. No ads, no accounts, no internet connection needed.
+
+• No ads, no sign-ups: open the app and calculate.
+• 100% offline and private: never asks for your contacts, location, photos or files. Every calculation runs on your iPhone.
+• Exact decimal precision: avoids common rounding errors like 0.1 + 0.2.
+• The essentials: addition, subtraction, multiplication, division, automatic parentheses and step-by-step delete.
+• Your last calculation always in view.
+
+Open source
+Compose Calculator is built with Kotlin Multiplatform and SwiftUI. The source code is open on GitHub:
+https://github.com/jesusdmedinac/compose-calculator

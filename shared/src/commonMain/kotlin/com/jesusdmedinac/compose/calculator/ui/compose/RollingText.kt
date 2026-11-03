@@ -27,6 +27,7 @@ import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.sp
 
 private const val CHAR_WIDTH_RATIO = 0.62f
+private const val LINE_HEIGHT_RATIO = 1.25f
 
 private val RollSpring = spring(
     dampingRatio = 0.6f,
@@ -37,7 +38,7 @@ private val RollSpring = spring(
 /**
  * Shows [text] one character at a time so each digit rolls in on a spring when
  * it changes, like a mechanical counter: higher digits roll up, lower ones down.
- * The font shrinks to keep long numbers on a single line.
+ * The font shrinks to keep long numbers on a single line and to fit short screens.
  */
 @Composable
 fun RollingText(
@@ -47,10 +48,11 @@ fun RollingText(
     modifier: Modifier = Modifier,
 ) {
     BoxWithConstraints(modifier = modifier, contentAlignment = Alignment.CenterEnd) {
-        val fittingFontSize = with(LocalDensity.current) {
-            (maxWidth / (text.length.coerceAtLeast(1) * CHAR_WIDTH_RATIO)).toSp()
+        val (widthFontSize, heightFontSize) = with(LocalDensity.current) {
+            (maxWidth / (text.length.coerceAtLeast(1) * CHAR_WIDTH_RATIO)).toSp() to
+                (maxHeight / LINE_HEIGHT_RATIO).toSp()
         }
-        val fontSize = minOf(fittingFontSize.value, style.fontSize.value).sp
+        val fontSize = minOf(widthFontSize.value, heightFontSize.value, style.fontSize.value).sp
         Row {
             text.forEachIndexed { index, char ->
                 key(index) {

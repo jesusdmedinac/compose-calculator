@@ -9,6 +9,12 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 
+/**
+ * Significant digits kept by every result. Enough for any integer a person types
+ * on a phone, while still rounding repeating decimals such as 1÷3.
+ */
+private const val RESULT_PRECISION = 20L
+
 class CalculatorEngine {
     private val _state = MutableStateFlow(CalculatorState())
     val state: StateFlow<CalculatorState> = _state.asStateFlow()
@@ -70,8 +76,11 @@ class CalculatorEngine {
         }
         var useExpression = expression
         if (expression.endsWith(".")) {
+            // "5." previews as 5, while a lone "." (as in "5+.") previews as 0.
             useExpression = expression.dropLast(1)
-            useExpression += "0."
+            if (useExpression.lastOrNull()?.isDigit() != true) {
+                useExpression += "0"
+            }
         }
         if (expression.endsWith("/") ||
             expression.endsWith("*") ||
@@ -83,14 +92,14 @@ class CalculatorEngine {
         }
         try {
             Expressions()
-                .setPrecision(10)
+                .setPrecision(RESULT_PRECISION)
                 .setRoundingMode(RoundingMode.ROUND_HALF_AWAY_FROM_ZERO)
                 .eval(useExpression)
         } catch (e: ExpressionException) {
             if (e.message?.startsWith("Expected end of expression") == true) {
                 useExpression += ")"
                 Expressions()
-                    .setPrecision(10)
+                    .setPrecision(RESULT_PRECISION)
                     .setRoundingMode(RoundingMode.ROUND_HALF_AWAY_FROM_ZERO)
                     .eval(useExpression)
             } else {

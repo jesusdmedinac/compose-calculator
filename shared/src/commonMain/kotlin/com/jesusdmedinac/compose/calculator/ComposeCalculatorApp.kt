@@ -30,6 +30,7 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.aspectRatio
@@ -59,6 +60,7 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.boundsInRoot
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.positionInRoot
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -77,6 +79,10 @@ import kotlinx.coroutines.launch
 
 private val KeyGap = 12.dp
 private val NeighborPush = 6.dp
+
+// Height the history, expression and result lines need at full size.
+private val DisplayContentHeight = 212.dp
+private const val MinDisplayTextScale = 0.5f
 
 private const val CircleExponent = 2f
 private const val SquircleExponent = 3.6f
@@ -170,79 +176,86 @@ private fun Display(
             resultScale.animateTo(1f, spring(dampingRatio = 0.4f, stiffness = Spring.StiffnessLow))
         }
     }
-    Column(
-        modifier = modifier.padding(horizontal = 28.dp, vertical = 24.dp),
-        horizontalAlignment = Alignment.End,
-        verticalArrangement = Arrangement.spacedBy(6.dp, Alignment.Bottom),
-    ) {
-        // The finished expression flies up and shrinks into the history line.
-        AnimatedContent(
-            targetState = state.lastCalculation,
-            transitionSpec = {
-                (
-                    slideInVertically(spring(dampingRatio = 0.7f, stiffness = Spring.StiffnessLow)) { it * 2 } +
-                        scaleIn(initialScale = 1.8f, transformOrigin = TransformOrigin(1f, 1f)) +
-                        fadeIn()
-                    ) togetherWith (slideOutVertically { -it } + fadeOut())
-            },
-        ) { lastCalculation ->
-            Text(
-                text = lastCalculation,
-                style = MaterialTheme.typography.titleMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                maxLines = 1,
-            )
-        }
-        AnimatedContent(
-            targetState = state.displayedCalculation.takeIf { hasResult },
-            contentKey = { it != null },
-            transitionSpec = {
-                fadeIn() togetherWith (slideOutVertically { -it } + fadeOut()) using SizeTransform(clip = false)
-            },
-        ) { expression ->
-            if (expression != null) {
-                ResponsiveText(
-                    text = expression,
-                    textStyle = MaterialTheme.typography.displayMedium,
-                    textAlign = TextAlign.End,
-                    color = MaterialTheme.colorScheme.onBackground,
-                )
-            }
-        }
-        Row(
-            modifier = Modifier.graphicsLayer {
-                scaleX = resultScale.value
-                scaleY = resultScale.value
-                transformOrigin = TransformOrigin(1f, 0.5f)
-            },
-            verticalAlignment = Alignment.CenterVertically,
+    BoxWithConstraints(modifier = modifier.padding(horizontal = 28.dp, vertical = 24.dp)) {
+        // On short screens every line shrinks together so all three keep fitting.
+        val textScale = (maxHeight / DisplayContentHeight).coerceIn(MinDisplayTextScale, 1f)
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            horizontalAlignment = Alignment.End,
+            verticalArrangement = Arrangement.spacedBy(6.dp * textScale, Alignment.Bottom),
         ) {
-            AnimatedVisibility(
-                visible = hasResult,
-                enter = fadeIn() + expandHorizontally(),
-                exit = fadeOut() + shrinkHorizontally(),
-            ) {
+            // The finished expression flies up and shrinks into the history line.
+            AnimatedContent(
+                targetState = state.lastCalculation,
+                transitionSpec = {
+                    (
+                        slideInVertically(spring(dampingRatio = 0.7f, stiffness = Spring.StiffnessLow)) { it * 2 } +
+                            scaleIn(initialScale = 1.8f, transformOrigin = TransformOrigin(1f, 1f)) +
+                            fadeIn()
+                        ) togetherWith (slideOutVertically { -it } + fadeOut())
+                },
+            ) { lastCalculation ->
                 Text(
-                    text = "=",
-                    modifier = Modifier.padding(end = 10.dp),
-                    fontSize = 48.sp,
-                    fontWeight = FontWeight.Light,
+                    text = lastCalculation,
+                    style = MaterialTheme.typography.titleMedium.scaled(textScale),
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 1,
                 )
             }
-            RollingText(
-                text = state.displayedResult
-                    .ifEmpty { state.displayedCalculation }
-                    .ifEmpty { "0" },
-                style = MaterialTheme.typography.displayLarge.copy(
-                    fontSize = 96.sp,
-                    fontWeight = FontWeight.Bold,
-                ),
-                color = MaterialTheme.colorScheme.primary,
-            )
+            AnimatedContent(
+                targetState = state.displayedCalculation.takeIf { hasResult },
+                contentKey = { it != null },
+                transitionSpec = {
+                    fadeIn() togetherWith (slideOutVertically { -it } + fadeOut()) using SizeTransform(clip = false)
+                },
+            ) { expression ->
+                if (expression != null) {
+                    ResponsiveText(
+                        text = expression,
+                        textStyle = MaterialTheme.typography.displayMedium.scaled(textScale),
+                        textAlign = TextAlign.End,
+                        color = MaterialTheme.colorScheme.onBackground,
+                    )
+                }
+            }
+            Row(
+                modifier = Modifier.graphicsLayer {
+                    scaleX = resultScale.value
+                    scaleY = resultScale.value
+                    transformOrigin = TransformOrigin(1f, 0.5f)
+                },
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                AnimatedVisibility(
+                    visible = hasResult,
+                    enter = fadeIn() + expandHorizontally(),
+                    exit = fadeOut() + shrinkHorizontally(),
+                ) {
+                    Text(
+                        text = "=",
+                        modifier = Modifier.padding(end = 10.dp),
+                        fontSize = 48.sp * textScale,
+                        fontWeight = FontWeight.Light,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+                RollingText(
+                    text = state.displayedResult
+                        .ifEmpty { state.displayedCalculation }
+                        .ifEmpty { "0" },
+                    style = MaterialTheme.typography.displayLarge.copy(
+                        fontSize = 96.sp * textScale,
+                        fontWeight = FontWeight.Bold,
+                    ),
+                    color = MaterialTheme.colorScheme.primary,
+                )
+            }
         }
     }
 }
+
+private fun TextStyle.scaled(scale: Float): TextStyle =
+    copy(fontSize = fontSize * scale, lineHeight = lineHeight * scale)
 
 @Composable
 fun ColumnOfButtons(

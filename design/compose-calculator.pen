@@ -1,0 +1,1030 @@
+{
+  "version": "2.21",
+  "children": [
+    {
+      "type": "frame",
+      "id": "NZsUA",
+      "x": 0,
+      "y": 0,
+      "name": "Ícono · Cubo de operadores",
+      "fill": "#FBFDF8",
+      "cornerRadius": 32,
+      "layout": "vertical",
+      "gap": 48,
+      "padding": 80,
+      "children": [
+        {
+          "type": "frame",
+          "id": "oQRI2",
+          "name": "Encabezado",
+          "layout": "vertical",
+          "gap": 12,
+          "children": [
+            {
+              "type": "text",
+              "id": "LnIIP",
+              "name": "Título",
+              "fill": "#191C19",
+              "content": "Compose Calculator · Cubo de operadores",
+              "fontFamily": "Inter",
+              "fontSize": 44,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "M8eukB",
+              "name": "Subtítulo",
+              "fill": "#414942",
+              "content": "Ícono de la app: cubo isométrico (Compose Multiplatform) con caras en el degradado de Zora y Kotlin, y un operador por cara.",
+              "fontFamily": "Inter",
+              "fontSize": 20,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "dnMCB",
+          "name": "Contenido",
+          "gap": 80,
+          "children": [
+            {
+              "type": "frame",
+              "id": "LNwTB",
+              "name": "App Icon · 1024",
+              "clip": true,
+              "width": 1024,
+              "height": 1024,
+              "fill": "#16111F",
+              "layout": "none",
+              "children": [
+                {
+                  "type": "path",
+                  "id": "v8VYij",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Cara superior",
+                  "geometry": "M54 24l26 15-26 15-26-15z",
+                  "viewBox": [
+                    0,
+                    0,
+                    108,
+                    108
+                  ],
+                  "fill": "#8A4DFF",
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "type": "path",
+                  "id": "w0KWw",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Cara izquierda",
+                  "geometry": "M28 39l26 15v30l-26-15z",
+                  "viewBox": [
+                    0,
+                    0,
+                    108,
+                    108
+                  ],
+                  "fill": "#CD00EC",
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "type": "path",
+                  "id": "TXcWj",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Cara derecha",
+                  "geometry": "M80 39l-26 15v30l26-15z",
+                  "viewBox": [
+                    0,
+                    0,
+                    108,
+                    108
+                  ],
+                  "fill": "#ED158A",
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "type": "path",
+                  "id": "yJPu1",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Más",
+                  "geometry": "M52.5 33.5l0 11a1.5 1.5 0 0 0 3 0l0-11a1.5 1.5 0 0 0-3 0z m-4 7l11 0a1.5 1.5 0 0 0 0-3l-11 0a1.5 1.5 0 0 0 0 3z",
+                  "viewBox": [
+                    0,
+                    0,
+                    108,
+                    108
+                  ],
+                  "fill": "#FFFFFF",
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "type": "path",
+                  "id": "f52pc",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Por",
+                  "geometry": "M34.93934 61.06066l8 8a1.5 1.5 0 0 0 2.12132-2.12132l-8-8a1.5 1.5 0 0 0-2.12132 2.12132z m8-2.12132l-8 8a1.5 1.5 0 0 0 2.12132 2.12132l8-8a1.5 1.5 0 0 0-2.12132-2.12132z",
+                  "viewBox": [
+                    0,
+                    0,
+                    108,
+                    108
+                  ],
+                  "fill": "#FFFFFF",
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "type": "path",
+                  "id": "TyVg5",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Igual",
+                  "geometry": "M63.55709 61.89272l10-4a1.5 1.5 0 0 0-1.11418-2.78544l-10 4a1.5 1.5 0 0 0 1.11418 2.78544z m0 7l10-4a1.5 1.5 0 0 0-1.11418-2.78544l-10 4a1.5 1.5 0 0 0 1.11418 2.78544z",
+                  "viewBox": [
+                    0,
+                    0,
+                    108,
+                    108
+                  ],
+                  "fill": "#FFFFFF",
+                  "width": 1024,
+                  "height": 1024
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "D2uOQ",
+              "name": "Lateral",
+              "layout": "vertical",
+              "gap": 56,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "adYiS",
+                  "name": "Máscaras del lanzador",
+                  "layout": "vertical",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ueO0A",
+                      "name": "Máscaras del lanzador · Título",
+                      "fill": "#191C19",
+                      "content": "Máscaras del lanzador",
+                      "fontFamily": "Inter",
+                      "fontSize": 22,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "lW1t8",
+                      "name": "Máscaras",
+                      "gap": 28,
+                      "alignItems": "end",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "JwJSQ",
+                          "name": "Círculo",
+                          "layout": "vertical",
+                          "gap": 10,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "y9Pdjn",
+                              "name": "Ícono Círculo",
+                              "clip": true,
+                              "width": 160,
+                              "height": 160,
+                              "fill": "#16111F",
+                              "cornerRadius": 80,
+                              "layout": "none",
+                              "children": [
+                                {
+                                  "type": "path",
+                                  "id": "vZThd",
+                                  "x": 0,
+                                  "y": 0,
+                                  "name": "Cara superior",
+                                  "geometry": "M54 24l26 15-26 15-26-15z",
+                                  "viewBox": [
+                                    0,
+                                    0,
+                                    108,
+                                    108
+                                  ],
+                                  "fill": "#8A4DFF",
+                                  "width": 160,
+                                  "height": 160
+                                },
+                                {
+                                  "type": "path",
+                                  "id": "cA82J",
+                                  "x": 0,
+                                  "y": 0,
+                                  "name": "Cara izquierda",
+                                  "geometry": "M28 39l26 15v30l-26-15z",
+                                  "viewBox": [
+                                    0,
+                                    0,
+                                    108,
+                                    108
+                                  ],
+                                  "fill": "#CD00EC",
+                                  "width": 160,
+                                  "height": 160
+                                },
+                                {
+                                  "type": "path",
+                                  "id": "gGuQ9",
+                                  "x": 0,
+                                  "y": 0,
+                                  "name": "Cara derecha",
+                                  "geometry": "M80 39l-26 15v30l26-15z",
+                                  "viewBox": [
+                                    0,
+                                    0,
+                                    108,
+                                    108
+                                  ],
+                                  "fill": "#ED158A",
+                                  "width": 160,
+                                  "height": 160
+                                },
+                                {
+                                  "type": "path",
+                                  "id": "UTeVS",
+                                  "x": 0,
+                                  "y": 0,
+                                  "name": "Más",
+                                  "geometry": "M52.5 33.5l0 11a1.5 1.5 0 0 0 3 0l0-11a1.5 1.5 0 0 0-3 0z m-4 7l11 0a1.5 1.5 0 0 0 0-3l-11 0a1.5 1.5 0 0 0 0 3z",
+                                  "viewBox": [
+                                    0,
+                                    0,
+                                    108,
+                                    108
+                                  ],
+                                  "fill": "#FFFFFF",
+                                  "width": 160,
+                                  "height": 160
+                                },
+                                {
+                                  "type": "path",
+                                  "id": "l524BX",
+                                  "x": 0,
+                                  "y": 0,
+                                  "name": "Por",
+                                  "geometry": "M34.93934 61.06066l8 8a1.5 1.5 0 0 0 2.12132-2.12132l-8-8a1.5 1.5 0 0 0-2.12132 2.12132z m8-2.12132l-8 8a1.5 1.5 0 0 0 2.12132 2.12132l8-8a1.5 1.5 0 0 0-2.12132-2.12132z",
+                                  "viewBox": [
+                                    0,
+                                    0,
+                                    108,
+                                    108
+                                  ],
+                                  "fill": "#FFFFFF",
+                                  "width": 160,
+                                  "height": 160
+                                },
+                                {
+                                  "type": "path",
+                                  "id": "Wwggf",
+                                  "x": 0,
+                                  "y": 0,
+                                  "name": "Igual",
+                                  "geometry": "M63.55709 61.89272l10-4a1.5 1.5 0 0 0-1.11418-2.78544l-10 4a1.5 1.5 0 0 0 1.11418 2.78544z m0 7l10-4a1.5 1.5 0 0 0-1.11418-2.78544l-10 4a1.5 1.5 0 0 0 1.11418 2.78544z",
+                                  "viewBox": [
+                                    0,
+                                    0,
+                                    108,
+                                    108
+                                  ],
+                                  "fill": "#FFFFFF",
+                                  "width": 160,
+                                  "height": 160
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "sHyx4",
+                              "name": "Etiqueta Círculo",
+                              "fill": "#414942",
+                              "content": "Círculo",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "S0WGO",
+                          "name": "Squircle",
+                          "layout": "vertical",
+                          "gap": 10,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "qVppI",
+                              "name": "Ícono Squircle",
+                              "clip": true,
+                              "width": 160,
+                              "height": 160,
+                              "fill": "#16111F",
+                              "cornerRadius": 48,
+                              "layout": "none",
+                              "children": [
+                                {
+                                  "type": "path",
+                                  "id": "KGwWb",
+                                  "x": 0,
+                                  "y": 0,
+                                  "name": "Cara superior",
+                                  "geometry": "M54 24l26 15-26 15-26-15z",
+                                  "viewBox": [
+                                    0,
+                                    0,
+                                    108,
+                                    108
+                                  ],
+                                  "fill": "#8A4DFF",
+                                  "width": 160,
+                                  "height": 160
+                                },
+                                {
+                                  "type": "path",
+                                  "id": "kl1Px",
+                                  "x": 0,
+                                  "y": 0,
+                                  "name": "Cara izquierda",
+                                  "geometry": "M28 39l26 15v30l-26-15z",
+                                  "viewBox": [
+                                    0,
+                                    0,
+                                    108,
+                                    108
+                                  ],
+                                  "fill": "#CD00EC",
+                                  "width": 160,
+                                  "height": 160
+                                },
+                                {
+                                  "type": "path",
+                                  "id": "yDhfM",
+                                  "x": 0,
+                                  "y": 0,
+                                  "name": "Cara derecha",
+                                  "geometry": "M80 39l-26 15v30l26-15z",
+                                  "viewBox": [
+                                    0,
+                                    0,
+                                    108,
+                                    108
+                                  ],
+                                  "fill": "#ED158A",
+                                  "width": 160,
+                                  "height": 160
+                                },
+                                {
+                                  "type": "path",
+                                  "id": "yNcWU",
+                                  "x": 0,
+                                  "y": 0,
+                                  "name": "Más",
+                                  "geometry": "M52.5 33.5l0 11a1.5 1.5 0 0 0 3 0l0-11a1.5 1.5 0 0 0-3 0z m-4 7l11 0a1.5 1.5 0 0 0 0-3l-11 0a1.5 1.5 0 0 0 0 3z",
+                                  "viewBox": [
+                                    0,
+                                    0,
+                                    108,
+                                    108
+                                  ],
+                                  "fill": "#FFFFFF",
+                                  "width": 160,
+                                  "height": 160
+                                },
+                                {
+                                  "type": "path",
+                                  "id": "S3rW5X",
+                                  "x": 0,
+                                  "y": 0,
+                                  "name": "Por",
+                                  "geometry": "M34.93934 61.06066l8 8a1.5 1.5 0 0 0 2.12132-2.12132l-8-8a1.5 1.5 0 0 0-2.12132 2.12132z m8-2.12132l-8 8a1.5 1.5 0 0 0 2.12132 2.12132l8-8a1.5 1.5 0 0 0-2.12132-2.12132z",
+                                  "viewBox": [
+                                    0,
+                                    0,
+                                    108,
+                                    108
+                                  ],
+                                  "fill": "#FFFFFF",
+                                  "width": 160,
+                                  "height": 160
+                                },
+                                {
+                                  "type": "path",
+                                  "id": "nwnOd",
+                                  "x": 0,
+                                  "y": 0,
+                                  "name": "Igual",
+                                  "geometry": "M63.55709 61.89272l10-4a1.5 1.5 0 0 0-1.11418-2.78544l-10 4a1.5 1.5 0 0 0 1.11418 2.78544z m0 7l10-4a1.5 1.5 0 0 0-1.11418-2.78544l-10 4a1.5 1.5 0 0 0 1.11418 2.78544z",
+                                  "viewBox": [
+                                    0,
+                                    0,
+                                    108,
+                                    108
+                                  ],
+                                  "fill": "#FFFFFF",
+                                  "width": 160,
+                                  "height": 160
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "T1Ljt",
+                              "name": "Etiqueta Squircle",
+                              "fill": "#414942",
+                              "content": "Squircle",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "IWvdC",
+                          "name": "iOS",
+                          "layout": "vertical",
+                          "gap": 10,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "h24gHY",
+                              "name": "Ícono iOS",
+                              "clip": true,
+                              "width": 160,
+                              "height": 160,
+                              "fill": "#16111F",
+                              "cornerRadius": 36,
+                              "layout": "none",
+                              "children": [
+                                {
+                                  "type": "path",
+                                  "id": "u8iOY",
+                                  "x": 0,
+                                  "y": 0,
+                                  "name": "Cara superior",
+                                  "geometry": "M54 24l26 15-26 15-26-15z",
+                                  "viewBox": [
+                                    0,
+                                    0,
+                                    108,
+                                    108
+                                  ],
+                                  "fill": "#8A4DFF",
+                                  "width": 160,
+                                  "height": 160
+                                },
+                                {
+                                  "type": "path",
+                                  "id": "V8VxyE",
+                                  "x": 0,
+                                  "y": 0,
+                                  "name": "Cara izquierda",
+                                  "geometry": "M28 39l26 15v30l-26-15z",
+                                  "viewBox": [
+                                    0,
+                                    0,
+                                    108,
+                                    108
+                                  ],
+                                  "fill": "#CD00EC",
+                                  "width": 160,
+                                  "height": 160
+                                },
+                                {
+                                  "type": "path",
+                                  "id": "NcWvM",
+                                  "x": 0,
+                                  "y": 0,
+                                  "name": "Cara derecha",
+                                  "geometry": "M80 39l-26 15v30l26-15z",
+                                  "viewBox": [
+                                    0,
+                                    0,
+                                    108,
+                                    108
+                                  ],
+                                  "fill": "#ED158A",
+                                  "width": 160,
+                                  "height": 160
+                                },
+                                {
+                                  "type": "path",
+                                  "id": "XnkOc",
+                                  "x": 0,
+                                  "y": 0,
+                                  "name": "Más",
+                                  "geometry": "M52.5 33.5l0 11a1.5 1.5 0 0 0 3 0l0-11a1.5 1.5 0 0 0-3 0z m-4 7l11 0a1.5 1.5 0 0 0 0-3l-11 0a1.5 1.5 0 0 0 0 3z",
+                                  "viewBox": [
+                                    0,
+                                    0,
+                                    108,
+                                    108
+                                  ],
+                                  "fill": "#FFFFFF",
+                                  "width": 160,
+                                  "height": 160
+                                },
+                                {
+                                  "type": "path",
+                                  "id": "ZU06f",
+                                  "x": 0,
+                                  "y": 0,
+                                  "name": "Por",
+                                  "geometry": "M34.93934 61.06066l8 8a1.5 1.5 0 0 0 2.12132-2.12132l-8-8a1.5 1.5 0 0 0-2.12132 2.12132z m8-2.12132l-8 8a1.5 1.5 0 0 0 2.12132 2.12132l8-8a1.5 1.5 0 0 0-2.12132-2.12132z",
+                                  "viewBox": [
+                                    0,
+                                    0,
+                                    108,
+                                    108
+                                  ],
+                                  "fill": "#FFFFFF",
+                                  "width": 160,
+                                  "height": 160
+                                },
+                                {
+                                  "type": "path",
+                                  "id": "q5BTM",
+                                  "x": 0,
+                                  "y": 0,
+                                  "name": "Igual",
+                                  "geometry": "M63.55709 61.89272l10-4a1.5 1.5 0 0 0-1.11418-2.78544l-10 4a1.5 1.5 0 0 0 1.11418 2.78544z m0 7l10-4a1.5 1.5 0 0 0-1.11418-2.78544l-10 4a1.5 1.5 0 0 0 1.11418 2.78544z",
+                                  "viewBox": [
+                                    0,
+                                    0,
+                                    108,
+                                    108
+                                  ],
+                                  "fill": "#FFFFFF",
+                                  "width": 160,
+                                  "height": 160
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "T5J2uD",
+                              "name": "Etiqueta iOS",
+                              "fill": "#414942",
+                              "content": "iOS",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Mah2V",
+                          "name": "48 px",
+                          "layout": "vertical",
+                          "gap": 10,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "X8r38W",
+                              "name": "Ícono 48 px",
+                              "clip": true,
+                              "width": 48,
+                              "height": 48,
+                              "fill": "#16111F",
+                              "cornerRadius": 24,
+                              "layout": "none",
+                              "children": [
+                                {
+                                  "type": "path",
+                                  "id": "eX6GJ",
+                                  "x": 0,
+                                  "y": 0,
+                                  "name": "Cara superior",
+                                  "geometry": "M54 24l26 15-26 15-26-15z",
+                                  "viewBox": [
+                                    0,
+                                    0,
+                                    108,
+                                    108
+                                  ],
+                                  "fill": "#8A4DFF",
+                                  "width": 48,
+                                  "height": 48
+                                },
+                                {
+                                  "type": "path",
+                                  "id": "wtQ3A",
+                                  "x": 0,
+                                  "y": 0,
+                                  "name": "Cara izquierda",
+                                  "geometry": "M28 39l26 15v30l-26-15z",
+                                  "viewBox": [
+                                    0,
+                                    0,
+                                    108,
+                                    108
+                                  ],
+                                  "fill": "#CD00EC",
+                                  "width": 48,
+                                  "height": 48
+                                },
+                                {
+                                  "type": "path",
+                                  "id": "hHCgq",
+                                  "x": 0,
+                                  "y": 0,
+                                  "name": "Cara derecha",
+                                  "geometry": "M80 39l-26 15v30l26-15z",
+                                  "viewBox": [
+                                    0,
+                                    0,
+                                    108,
+                                    108
+                                  ],
+                                  "fill": "#ED158A",
+                                  "width": 48,
+                                  "height": 48
+                                },
+                                {
+                                  "type": "path",
+                                  "id": "HmouF",
+                                  "x": 0,
+                                  "y": 0,
+                                  "name": "Más",
+                                  "geometry": "M52.5 33.5l0 11a1.5 1.5 0 0 0 3 0l0-11a1.5 1.5 0 0 0-3 0z m-4 7l11 0a1.5 1.5 0 0 0 0-3l-11 0a1.5 1.5 0 0 0 0 3z",
+                                  "viewBox": [
+                                    0,
+                                    0,
+                                    108,
+                                    108
+                                  ],
+                                  "fill": "#FFFFFF",
+                                  "width": 48,
+                                  "height": 48
+                                },
+                                {
+                                  "type": "path",
+                                  "id": "XpVed",
+                                  "x": 0,
+                                  "y": 0,
+                                  "name": "Por",
+                                  "geometry": "M34.93934 61.06066l8 8a1.5 1.5 0 0 0 2.12132-2.12132l-8-8a1.5 1.5 0 0 0-2.12132 2.12132z m8-2.12132l-8 8a1.5 1.5 0 0 0 2.12132 2.12132l8-8a1.5 1.5 0 0 0-2.12132-2.12132z",
+                                  "viewBox": [
+                                    0,
+                                    0,
+                                    108,
+                                    108
+                                  ],
+                                  "fill": "#FFFFFF",
+                                  "width": 48,
+                                  "height": 48
+                                },
+                                {
+                                  "type": "path",
+                                  "id": "VhtHB",
+                                  "x": 0,
+                                  "y": 0,
+                                  "name": "Igual",
+                                  "geometry": "M63.55709 61.89272l10-4a1.5 1.5 0 0 0-1.11418-2.78544l-10 4a1.5 1.5 0 0 0 1.11418 2.78544z m0 7l10-4a1.5 1.5 0 0 0-1.11418-2.78544l-10 4a1.5 1.5 0 0 0 1.11418 2.78544z",
+                                  "viewBox": [
+                                    0,
+                                    0,
+                                    108,
+                                    108
+                                  ],
+                                  "fill": "#FFFFFF",
+                                  "width": 48,
+                                  "height": 48
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "Te15X",
+                              "name": "Etiqueta 48 px",
+                              "fill": "#414942",
+                              "content": "48 px",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "l5i7mG",
+                  "name": "Paleta",
+                  "layout": "vertical",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "CpHgh",
+                      "name": "Paleta · Título",
+                      "fill": "#191C19",
+                      "content": "Paleta",
+                      "fontFamily": "Inter",
+                      "fontSize": 22,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Mcv2C",
+                      "name": "Muestras",
+                      "gap": 20,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "ALtrb",
+                          "name": "Fondo",
+                          "layout": "vertical",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 20,
+                              "id": "MMthV",
+                              "name": "Muestra Fondo",
+                              "fill": "#16111F",
+                              "width": 96,
+                              "height": 96,
+                              "stroke": "#DDE5DB",
+                              "strokeWidth": 1
+                            },
+                            {
+                              "type": "text",
+                              "id": "Qdw20",
+                              "name": "Nombre Fondo",
+                              "fill": "#191C19",
+                              "content": "Fondo",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "AwKm7",
+                              "name": "Hex Fondo",
+                              "fill": "#414942",
+                              "content": "#16111F",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "JCFs9",
+                          "name": "Superior",
+                          "layout": "vertical",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 20,
+                              "id": "HF5nr",
+                              "name": "Muestra Superior",
+                              "fill": "#8A4DFF",
+                              "width": 96,
+                              "height": 96,
+                              "stroke": "#DDE5DB",
+                              "strokeWidth": 1
+                            },
+                            {
+                              "type": "text",
+                              "id": "GVUiv",
+                              "name": "Nombre Superior",
+                              "fill": "#191C19",
+                              "content": "Superior",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "JFqvJ",
+                              "name": "Hex Superior",
+                              "fill": "#414942",
+                              "content": "#8A4DFF",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "qFf4u",
+                          "name": "Izquierda",
+                          "layout": "vertical",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 20,
+                              "id": "lAEzc",
+                              "name": "Muestra Izquierda",
+                              "fill": "#CD00EC",
+                              "width": 96,
+                              "height": 96,
+                              "stroke": "#DDE5DB",
+                              "strokeWidth": 1
+                            },
+                            {
+                              "type": "text",
+                              "id": "iNNEP",
+                              "name": "Nombre Izquierda",
+                              "fill": "#191C19",
+                              "content": "Izquierda",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "xtGvo",
+                              "name": "Hex Izquierda",
+                              "fill": "#414942",
+                              "content": "#CD00EC",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "a5a5VO",
+                          "name": "Derecha",
+                          "layout": "vertical",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 20,
+                              "id": "WahNN",
+                              "name": "Muestra Derecha",
+                              "fill": "#ED158A",
+                              "width": 96,
+                              "height": 96,
+                              "stroke": "#DDE5DB",
+                              "strokeWidth": 1
+                            },
+                            {
+                              "type": "text",
+                              "id": "WX4HT",
+                              "name": "Nombre Derecha",
+                              "fill": "#191C19",
+                              "content": "Derecha",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "I1Q5d",
+                              "name": "Hex Derecha",
+                              "fill": "#414942",
+                              "content": "#ED158A",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "dHyVh",
+                          "name": "Glifos",
+                          "layout": "vertical",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 20,
+                              "id": "F0VtZU",
+                              "name": "Muestra Glifos",
+                              "fill": "#FFFFFF",
+                              "width": 96,
+                              "height": 96,
+                              "stroke": "#DDE5DB",
+                              "strokeWidth": 1
+                            },
+                            {
+                              "type": "text",
+                              "id": "D3GFga",
+                              "name": "Nombre Glifos",
+                              "fill": "#191C19",
+                              "content": "Glifos",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "eY6tW",
+                              "name": "Hex Glifos",
+                              "fill": "#414942",
+                              "content": "#FFFFFF",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "fwTzj",
+                  "name": "Notas",
+                  "layout": "vertical",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "D1tsou",
+                      "name": "Notas · Título",
+                      "fill": "#191C19",
+                      "content": "Notas",
+                      "fontFamily": "Inter",
+                      "fontSize": 22,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "L2PUqt",
+                      "name": "Nota 1",
+                      "fill": "#414942",
+                      "textGrowth": "fixed-width",
+                      "width": 520,
+                      "content": "• Motivo dentro de la zona segura de 66/108 del ícono adaptativo.",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "o1KW6y",
+                      "name": "Nota 2",
+                      "fill": "#414942",
+                      "textGrowth": "fixed-width",
+                      "width": 520,
+                      "content": "• Exportar App Icon · 1024 para iOS y escalar a 512 para Play Store.",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "n7s15",
+                      "name": "Nota 3",
+                      "fill": "#414942",
+                      "textGrowth": "fixed-width",
+                      "width": 520,
+                      "content": "• En Android, separar fondo (#16111F) y caras + glifos como foreground.",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "fileToken": "19b02623-bff6-457a-9c3f-0bba7345f733"
+}

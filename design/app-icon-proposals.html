@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Propuestas de ícono</title>
+<style>
+  :root { --bg: #FBFDF8; --fg: #191C19; --muted: #414942; --card: #FFFFFF; --line: #DDE5DB; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --bg: #191C19; --fg: #E1E3DE; --muted: #C1C9BF; --card: #232723; --line: #414942; }
+  }
+  :root[data-theme="dark"] { --bg: #191C19; --fg: #E1E3DE; --muted: #C1C9BF; --card: #232723; --line: #414942; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.5 system-ui, sans-serif; padding: 32px 16px; }
+  main { max-width: 1040px; margin: 0 auto; }
+  h1 { font-size: 28px; margin: 0 0 4px; }
+  p.lead { color: var(--muted); margin: 0 0 32px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 24px; }
+  .card h2 { font-size: 18px; margin: 0 0 4px; }
+  .card p { color: var(--muted); margin: 0 0 20px; font-size: 14px; }
+  .hero svg { width: 100%; max-width: 240px; display: block; margin: 0 auto 20px; border-radius: 22%; box-shadow: 0 8px 24px rgba(0,0,0,.18); }
+  .masks { display: flex; gap: 16px; justify-content: center; align-items: center; }
+  .masks svg { width: 64px; height: 64px; }
+  .masks .circle { border-radius: 50%; }
+  .masks .squircle { border-radius: 30%; }
+  .masks .small { width: 40px; height: 40px; border-radius: 50%; }
+  .labels { display: flex; gap: 16px; justify-content: center; color: var(--muted); font-size: 12px; margin-top: 6px; }
+  .labels span { width: 64px; text-align: center; }
+  .labels span:last-child { width: 40px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Compose Calculator: propuestas de ícono</h1>
+  <p class="lead">Lienzo de ícono adaptativo de 108 unidades con el motivo dentro de la zona segura central de 66. Los colores salen del tema Material 3 de la app.</p>
+
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <!-- A · Teclado: cuadrícula 2×2 de teclas, como el teclado de la app -->
+      <symbol id="a" viewBox="0 0 108 108">
+        <rect width="108" height="108" fill="#006D3B"/>
+        <rect x="27" y="27" width="26" height="26" rx="10" fill="#66FEA2"/>
+        <rect x="55" y="27" width="26" height="26" rx="10" fill="#FFFFFF"/>
+        <rect x="27" y="55" width="26" height="26" rx="10" fill="#FFFFFF"/>
+        <rect x="55" y="55" width="26" height="26" rx="10" fill="#43E188"/>
+        <g stroke="#00391C" stroke-width="3.6" stroke-linecap="round">
+          <path d="M40 34v12M34 40h12"/>
+          <path d="M62 40h12"/>
+          <path d="M36 64l8 8M44 64l-8 8"/>
+          <path d="M62 64.5h12M62 71.5h12"/>
+        </g>
+      </symbol>
+      <!-- B · Igual: un solo símbolo grande, se reconoce aun en tamaño pequeño -->
+      <symbol id="b" viewBox="0 0 108 108">
+        <defs>
+          <linearGradient id="bg-b" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#43E188"/>
+            <stop offset="1" stop-color="#006D3B"/>
+          </linearGradient>
+        </defs>
+        <rect width="108" height="108" fill="url(#bg-b)"/>
+        <rect x="30" y="44" width="48" height="10" rx="5" fill="#FFFFFF"/>
+        <rect x="30" y="60" width="48" height="10" rx="5" fill="#FFFFFF"/>
+        <circle cx="66" cy="31" r="7" fill="#00391C"/>
+        <path d="M66 27v8M62 31h8" stroke="#66FEA2" stroke-width="2.4" stroke-linecap="round"/>
+      </symbol>
+      <!-- C · Pantalla: fondo oscuro con una tecla menta y la pantalla del resultado -->
+      <symbol id="c" viewBox="0 0 108 108">
+        <rect width="108" height="108" fill="#191C19"/>
+        <rect x="28" y="28" width="52" height="14" rx="6" fill="#2E312E"/>
+        <rect x="58" y="33" width="16" height="4" rx="2" fill="#C1C9BF"/>
+        <rect x="28" y="48" width="52" height="32" rx="14" fill="#66FEA2"/>
+        <path d="M54 56v16M46 64h16" stroke="#00210E" stroke-width="5" stroke-linecap="round"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <div class="grid">
+    <section class="card">
+      <h2>A · Teclado</h2>
+      <p>Cuatro teclas redondeadas con + − × =. Repite la forma del teclado de la app, así que el ícono y la app se ven como una sola cosa.</p>
+      <div class="hero"><svg viewBox="0 0 108 108"><use href="#a"/></svg></div>
+      <div class="masks">
+        <svg class="circle" viewBox="0 0 108 108"><use href="#a"/></svg>
+        <svg class="squircle" viewBox="0 0 108 108"><use href="#a"/></svg>
+        <svg class="small" viewBox="0 0 108 108"><use href="#a"/></svg>
+      </div>
+      <div class="labels"><span>Círculo</span><span>Squircle</span><span>40 px</span></div>
+    </section>
+
+    <section class="card">
+      <h2>B · Igual</h2>
+      <p>Un “=” grande sobre un degradado verde, con un pequeño “+” de acento. Es la opción que mejor se lee en 40 px.</p>
+      <div class="hero"><svg viewBox="0 0 108 108"><use href="#b"/></svg></div>
+      <div class="masks">
+        <svg class="circle" viewBox="0 0 108 108"><use href="#b"/></svg>
+        <svg class="squircle" viewBox="0 0 108 108"><use href="#b"/></svg>
+        <svg class="small" viewBox="0 0 108 108"><use href="#b"/></svg>
+      </div>
+      <div class="labels"><span>Círculo</span><span>Squircle</span><span>40 px</span></div>
+    </section>
+
+    <section class="card">
+      <h2>C · Pantalla</h2>
+      <p>Fondo oscuro con la pantalla del resultado y una tecla menta grande. Destaca entre íconos claros y combina con el tema oscuro.</p>
+      <div class="hero"><svg viewBox="0 0 108 108"><use href="#c"/></svg></div>
+      <div class="masks">
+        <svg class="circle" viewBox="0 0 108 108"><use href="#c"/></svg>
+        <svg class="squircle" viewBox="0 0 108 108"><use href="#c"/></svg>
+        <svg class="small" viewBox="0 0 108 108"><use href="#c"/></svg>
+      </div>
+      <div class="labels"><span>Círculo</span><span>Squircle</span><span>40 px</span></div>
+    </section>
+  </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Propuestas de ícono v2</title>
+<style>
+  :root { --bg: #FBFDF8; --fg: #191C19; --muted: #414942; --card: #FFFFFF; --line: #DDE5DB; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --bg: #191C19; --fg: #E1E3DE; --muted: #C1C9BF; --card: #232723; --line: #414942; }
+  }
+  :root[data-theme="dark"] { --bg: #191C19; --fg: #E1E3DE; --muted: #C1C9BF; --card: #232723; --line: #414942; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.5 system-ui, sans-serif; padding: 32px 16px; }
+  main { max-width: 1040px; margin: 0 auto; }
+  h1 { font-size: 28px; margin: 0 0 4px; }
+  p.lead { color: var(--muted); margin: 0 0 32px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 24px; }
+  .card h2 { font-size: 18px; margin: 0 0 4px; }
+  .card .ref { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 8px; }
+  .card p { color: var(--muted); margin: 0 0 20px; font-size: 14px; }
+  .hero svg { width: 100%; max-width: 240px; display: block; margin: 0 auto 20px; border-radius: 22%; box-shadow: 0 8px 24px rgba(0,0,0,.18); }
+  .masks { display: flex; gap: 16px; justify-content: center; align-items: center; }
+  .masks svg { width: 64px; height: 64px; }
+  .masks .circle { border-radius: 50%; }
+  .masks .squircle { border-radius: 30%; }
+  .masks .small { width: 40px; height: 40px; border-radius: 50%; }
+  .labels { display: flex; gap: 16px; justify-content: center; color: var(--muted); font-size: 12px; margin-top: 6px; }
+  .labels span { width: 64px; text-align: center; }
+  .labels span:last-child { width: 40px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Compose Calculator: propuestas de ícono, iteración 2</h1>
+  <p class="lead">Inspiradas en la geometría de Zora, los cortes diagonales de Kotlin y el hexágono de Compose Multiplatform. Lienzo adaptativo de 108 unidades con el motivo dentro de la zona segura central de 66.</p>
+
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <linearGradient id="zora" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#8A4DFF"/>
+        <stop offset=".5" stop-color="#CD00EC"/>
+        <stop offset="1" stop-color="#ED158A"/>
+      </linearGradient>
+      <linearGradient id="kotlin" x1="1" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#7F52FF"/>
+        <stop offset=".55" stop-color="#C811E2"/>
+        <stop offset="1" stop-color="#E54857"/>
+      </linearGradient>
+      <linearGradient id="compose" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#4285F4"/>
+        <stop offset="1" stop-color="#3DDC84"/>
+      </linearGradient>
+
+      <!-- D · Tangram: triángulos al estilo Zora; los cortes entre ellos dibujan un × -->
+      <symbol id="d" viewBox="0 0 108 108">
+        <rect width="108" height="108" fill="#16111F"/>
+        <rect x="31" y="31" width="46" height="46" rx="5" fill="url(#zora)"/>
+        <path d="M31 31L77 77M77 31L31 77" stroke="#16111F" stroke-width="5"/>
+        <path d="M54 37v8M50 41h8" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M50 66h8M50 70.5h8" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/>
+      </symbol>
+
+      <!-- E · Porcentaje: la barra diagonal tiene los cortes angulosos de Kotlin -->
+      <symbol id="e" viewBox="0 0 108 108">
+        <rect width="108" height="108" fill="url(#kotlin)"/>
+        <path d="M34 78L62 30H74L46 78Z" fill="#FFFFFF"/>
+        <circle cx="39" cy="40" r="8" fill="#FFFFFF"/>
+        <circle cx="69" cy="68" r="8" fill="#FFFFFF"/>
+      </symbol>
+
+      <!-- F · Cubo: hexágono isométrico con una tecla “+” al centro -->
+      <symbol id="f" viewBox="0 0 108 108">
+        <rect width="108" height="108" fill="url(#compose)"/>
+        <g fill="none" stroke="#FFFFFF" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round">
+          <path d="M54 24L80 39V69L54 84L28 69V39Z"/>
+          <path d="M54 67V84M65.3 47.5L80 39M42.7 47.5L28 39"/>
+        </g>
+        <path d="M54 41L65.3 47.5V60.5L54 67L42.7 60.5V47.5Z" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M54 48.5v11M48.5 54h11" stroke="#2F7FD0" stroke-width="3.2" stroke-linecap="round"/>
+      </symbol>
+
+      <!-- G · Mezcla: el cubo de F con los triángulos y el degradado de Zora/Kotlin -->
+      <symbol id="g" viewBox="0 0 108 108">
+        <rect width="108" height="108" fill="#16111F"/>
+        <path d="M54 24L80 39L54 54L28 39Z" fill="#8A4DFF"/>
+        <path d="M28 39L54 54V84L28 69Z" fill="#CD00EC"/>
+        <path d="M80 39L54 54V84L80 69Z" fill="#ED158A"/>
+        <g stroke="#FFFFFF" stroke-width="3" stroke-linecap="round">
+          <path d="M54 33.5v11M48.5 39h11"/>
+          <path d="M36 60l8 8M44 60l-8 8"/>
+          <path d="M63 60.5l10 -4M63 67.5l10 -4"/>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <div class="grid">
+    <section class="card">
+      <p class="ref">Zora</p>
+      <h2>D · Tangram</h2>
+      <p>Cuatro triángulos con el degradado de Zora. Los cortes entre ellos forman un ×, y los triángulos de arriba y abajo llevan + e =.</p>
+      <div class="hero"><svg viewBox="0 0 108 108"><use href="#d"/></svg></div>
+      <div class="masks">
+        <svg class="circle" viewBox="0 0 108 108"><use href="#d"/></svg>
+        <svg class="squircle" viewBox="0 0 108 108"><use href="#d"/></svg>
+        <svg class="small" viewBox="0 0 108 108"><use href="#d"/></svg>
+      </div>
+      <div class="labels"><span>Círculo</span><span>Squircle</span><span>40 px</span></div>
+    </section>
+
+    <section class="card">
+      <p class="ref">Kotlin</p>
+      <h2>E · Porcentaje</h2>
+      <p>Un % blanco cuya barra diagonal tiene los cortes angulosos de Kotlin, sobre un degradado de violeta a coral. Es la más simple y la que mejor se lee pequeña.</p>
+      <div class="hero"><svg viewBox="0 0 108 108"><use href="#e"/></svg></div>
+      <div class="masks">
+        <svg class="circle" viewBox="0 0 108 108"><use href="#e"/></svg>
+        <svg class="squircle" viewBox="0 0 108 108"><use href="#e"/></svg>
+        <svg class="small" viewBox="0 0 108 108"><use href="#e"/></svg>
+      </div>
+      <div class="labels"><span>Círculo</span><span>Squircle</span><span>40 px</span></div>
+    </section>
+
+    <section class="card">
+      <p class="ref">Compose Multiplatform</p>
+      <h2>F · Cubo</h2>
+      <p>Un cubo isométrico con contorno blanco y una tecla “+” en el centro, sobre un degradado del azul de Compose al verde de la app.</p>
+      <div class="hero"><svg viewBox="0 0 108 108"><use href="#f"/></svg></div>
+      <div class="masks">
+        <svg class="circle" viewBox="0 0 108 108"><use href="#f"/></svg>
+        <svg class="squircle" viewBox="0 0 108 108"><use href="#f"/></svg>
+        <svg class="small" viewBox="0 0 108 108"><use href="#f"/></svg>
+      </div>
+      <div class="labels"><span>Círculo</span><span>Squircle</span><span>40 px</span></div>
+    </section>
+
+    <section class="card">
+      <p class="ref">Las tres</p>
+      <h2>G · Cubo de operadores</h2>
+      <p>Une las tres referencias: el cubo de Compose con caras sólidas en los tonos del degradado de Zora y Kotlin. Cada cara lleva un operador (+, × e =).</p>
+      <div class="hero"><svg viewBox="0 0 108 108"><use href="#g"/></svg></div>
+      <div class="masks">
+        <svg class="circle" viewBox="0 0 108 108"><use href="#g"/></svg>
+        <svg class="squircle" viewBox="0 0 108 108"><use href="#g"/></svg>
+        <svg class="small" viewBox="0 0 108 108"><use href="#g"/></svg>
+      </div>
+      <div class="labels"><span>Círculo</span><span>Squircle</span><span>40 px</span></div>
+    </section>
+  </div>
+</main>
+</body>
+</html>

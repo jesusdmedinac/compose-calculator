@@ -27,7 +27,6 @@ class CalculatorEngine {
 
     private fun numberOperatorOrDecimalClicked(keypad: Keypad) {
         state.update {
-            println("it.displayedCalculation: ${it.displayedCalculation}")
             val displayedCalculation = with(it.displayedCalculation) {
                 this + when {
                     keypad == Keypad.PARENTHESIS &&
@@ -44,11 +43,11 @@ class CalculatorEngine {
                     else -> keypad.label
                 }
             }
-            println("displayedCalculation: $displayedCalculation")
             val result = calculateResult(displayedCalculation)
             it.copy(
                 displayedCalculation = displayedCalculation,
                 displayedResult = result.toStringExpanded(),
+                operation = keypad.operation,
             )
         }
     }
@@ -58,10 +57,13 @@ class CalculatorEngine {
     private fun String.lastCharIsNumber() = lastOrNull()?.isDigit() == true
 
     private fun clearClicked() {
-        state.update { CalculatorState() }
+        state.update { CalculatorState(lastCalculation = it.lastCalculation) }
     }
 
-    private fun calculateResult(expression: String): BigDecimal = run {
+    private fun calculateResult(displayedExpression: String): BigDecimal = run {
+        val expression = Keypad.values().fold(displayedExpression) { acc, keypad ->
+            if (keypad.operation == Operation.NONE) acc else acc.replace(keypad.label, keypad.value)
+        }
         if (expression.isEmpty()) {
             return@run BigDecimal.ZERO
         }
@@ -98,11 +100,16 @@ class CalculatorEngine {
 
     private fun equalsClicked() {
         state.update {
-            val result = calculateResult(it.displayedCalculation)
+            if (it.displayedCalculation.isEmpty()) {
+                return@update it
+            }
+            val result = calculateResult(it.displayedCalculation).toStringExpanded()
 
             it.copy(
-                displayedCalculation = result.toStringExpanded(),
+                displayedCalculation = result,
                 displayedResult = "",
+                operation = Operation.NONE,
+                lastCalculation = "${it.displayedCalculation} = $result",
             )
         }
     }
@@ -117,6 +124,7 @@ class CalculatorEngine {
             it.copy(
                 displayedCalculation = displayedCalculation,
                 displayedResult = result.toStringExpanded(),
+                operation = Operation.NONE,
             )
         }
     }
@@ -132,6 +140,7 @@ data class CalculatorState(
     val displayedCalculation: String = "",
     val displayedResult: String = "",
     val operation: Operation = Operation.NONE,
+    val lastCalculation: String = "",
 )
 
 enum class Operation {

@@ -85,8 +85,7 @@ class CalculatorEngine {
         if (expression.endsWith("/") ||
             expression.endsWith("*") ||
             expression.endsWith("+") ||
-            expression.endsWith("-") ||
-            expression.endsWith("%")
+            expression.endsWith("-")
         ) {
             useExpression = expression.dropLast(1)
         }

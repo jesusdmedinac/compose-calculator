@@ -61,6 +61,41 @@ class CalculatorEngineTest {
     }
 
     @Test
+    fun percentIsAHundredthOfTheNumber() {
+        assertEquals("0.2", CalculatorEngine().type("20%").equals())
+    }
+
+    @Test
+    fun multiplyingByAPercentTakesThatShare() {
+        assertEquals("10", CalculatorEngine().type("50×20%").equals())
+    }
+
+    @Test
+    fun addingOrSubtractingAPercentAppliesItToTheLeftSide() {
+        assertEquals("60", CalculatorEngine().type("50+20%").equals())
+        assertEquals("40", CalculatorEngine().type("50−20%").equals())
+    }
+
+    @Test
+    fun percentIsPreviewedWhileTyping() {
+        assertEquals("10", CalculatorEngine().type("50×20%").state.value.displayedResult)
+    }
+
+    @Test
+    fun percentFollowedByANumberMultiplies() {
+        assertEquals("10", CalculatorEngine().type("50%20").equals())
+    }
+
+    @Test
+    fun parenthesesGroupBeforeMultiplying() {
+        val engine = CalculatorEngine()
+        engine.onKeypadClicked(Keypad.PARENTHESIS)
+        engine.type("5+3")
+        engine.onKeypadClicked(Keypad.PARENTHESIS)
+        assertEquals("16", engine.type("×2").equals())
+    }
+
+    @Test
     fun equalsRecordsTheLastCalculation() {
         val engine = CalculatorEngine().type("12+3")
         engine.equals()

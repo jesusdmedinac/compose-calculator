@@ -108,7 +108,7 @@ internal class Parser(private val tokens: List<Token>) {
     private fun multiplication(): Expr {
         var left = unary()
 
-        while (match(STAR, SLASH, MODULO)) {
+        while (match(STAR, SLASH)) {
             val operator = previous()
             val right = unary()
 
@@ -141,7 +141,7 @@ internal class Parser(private val tokens: List<Token>) {
     }
 
     private fun exponent(): Expr {
-        var left = call()
+        var left = percent()
 
         if (match(EXPONENT)) {
             val operator = previous()
@@ -151,6 +151,24 @@ internal class Parser(private val tokens: List<Token>) {
         }
 
         return left
+    }
+
+    /**
+     * `%` is a postfix percentage, as on a pocket calculator: `20%` is 0.2. A value
+     * written right after it is multiplied, so `50%20` reads as 50% of 20.
+     */
+    private fun percent(): Expr {
+        var expr = call()
+
+        while (match(MODULO)) {
+            expr = PercentExpr(expr)
+
+            if (check(NUMBER) || check(IDENTIFIER) || check(LEFT_PAREN) || check(SQUARE_ROOT)) {
+                expr = BinaryExpr(expr, Token(STAR, "*", null), unary())
+            }
+        }
+
+        return expr
     }
 
     private fun call(): Expr {

@@ -1,0 +1,42 @@
+Response to Guideline 2.1 - Information Needed (Compose Calculator 1.1.0)
+
+1. Screen recording
+A screen recording captured on a physical iPhone is attached to our reply in App Review messages. It shows:
+- Launching the app from the iPhone home screen.
+- The calculator is available immediately; there is no onboarding, sign-in, or configuration.
+- Arithmetic with addition, subtraction, multiplication, division, parentheses, and percentages.
+- The live result preview updating as the expression is typed.
+- Exact decimal arithmetic (0.1 + 0.2 = 0.3).
+- Backspace and All Clear (AC).
+- The last completed calculation shown above the current expression.
+
+Flows that do not apply:
+- Account registration, login, and deletion: the app has no user accounts.
+- User-generated content: the app has none.
+- Paid content or features: the app is free, with no in-app purchases, subscriptions, or paywalls.
+
+2. Purpose, audience, problem solved, and value
+- Purpose: Compose Calculator is an offline, distraction-free calculator with a native SwiftUI Liquid Glass interface and an arbitrary-precision decimal arithmetic engine.
+- Target audience: any iPhone user who wants a clean, private calculator for everyday, school, or work calculations.
+- Problem solved: it avoids ads, tracking, and the binary floating-point rounding errors some calculators show (for example 0.1 + 0.2 = 0.30000000000000004).
+- Value: instant startup, exact decimal results up to 20 significant digits, a live preview while typing, haptic feedback, and no data collection.
+
+3. Setup and access to the main features
+- Setup: none. No login credentials, demo account, or sample files are needed.
+- Usage:
+  1. Open the app; the keypad is shown immediately.
+  2. Tap digits and operators (+, −, ×, ÷, %) to build an expression. The "( )" key opens or closes a parenthesis depending on context. The preview shows the result as you type.
+  3. Tap "=" to finish the calculation; it moves to the line above the display.
+  4. Tap the backspace key to delete one character at a time.
+  5. Tap "AC" to clear the expression.
+
+4. External services, tools, or platforms
+- None. The app makes no network requests and works fully offline.
+- It uses no backend, analytics SDK, advertising framework, tracking identifier, authentication provider, payment processor, or AI service.
+- All calculations run on-device in a bundled Kotlin Multiplatform module.
+
+5. Regional differences
+- None. The app behaves identically in every country and region.
+6. Regulated industry / third-party material
+- Regulated industry: not applicable. The app is a general-purpose calculator.
+- Third-party material: the app contains no third-party content, media, or trademarks. Its source code is open source under the Apache 2.0 license (https://github.com/jesusdmedinac/compose-calculator) and bundles two open-source libraries under their own licenses: ExprK (MIT, expression parser) and ionspin kotlin-multiplatform-bignum (Apache 2.0, arbitrary-precision numbers).

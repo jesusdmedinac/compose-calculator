@@ -38,3 +38,37 @@ final class StoreScreenshotsUITests: XCTestCase {
         add(attachment)
     }
 }
+
+/// Walks through the review script on a physical iPhone while QuickTime records the screen.
+/// Starts from the Home Screen, as App Review asked for.
+final class ReviewVideoUITests: XCTestCase {
+    private let app = XCUIApplication()
+
+    func testReviewScript() {
+        continueAfterFailure = false
+        XCUIDevice.shared.press(.home)
+        sleep(3)
+        app.activate()
+        sleep(2)
+
+        type(["1", "2", "+", "3", "4", "="])
+        type(["0", ".", "1", "+", "0", ".", "2", "="])
+        type(["AC"])
+        type(["5", "0", "×", "2", "0", "%", "="])
+        type(["AC"])
+        type(["( )", "5", "+", "3", "( )", "×", "2", "="])
+        type(["AC"])
+        type(["1", "2", "3", "Delete"])
+        sleep(3)
+        type(["AC"])
+        sleep(2)
+    }
+
+    private func type(_ keys: [String]) {
+        for key in keys {
+            app.buttons[key].tap()
+            sleep(1)
+        }
+        sleep(2)
+    }
+}

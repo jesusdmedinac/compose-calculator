@@ -129,6 +129,7 @@ private struct GlassKey: View {
                 .contentShape(.circle)
         }
         .buttonStyle(.plain)
+        .accessibilityLabel(keypad == .undo ? "Delete" : keypad.label)
         .glassEffect(.regular.tint(tint).interactive(), in: .circle)
         .animation(.smooth, value: isActive)
     }

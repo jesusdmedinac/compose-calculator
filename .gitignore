@@ -33,3 +33,8 @@ assets/adi-registration.properties
 
 # Cloudflare & Tooling
 .wrangler/
+
+# Screen recordings & media dumps
+screenrecording/
+*.mov
+

@@ -3,7 +3,7 @@ set -e
 
 AAB_PATH="androidApp/build/outputs/bundle/release/androidApp-release.aab"
 EXPECTED_PACKAGE="com.jesusdmedinac.compose.calculator"
-EXPECTED_VERSION_CODE="1000009"
+EXPECTED_VERSION_CODE="1000010"
 EXPECTED_VERSION_NAME="1.1.0"
 EXPECTED_TARGET_SDK="36"
 EXPECTED_MIN_SDK="24"

@@ -1,0 +1,5 @@
+Nuevo diseño Material 3 Expressive:
+• Nuevo ícono y colores violeta y magenta, con modo oscuro.
+• Teclas con formas expresivas y animaciones con rebote.
+• Los números del resultado ruedan al cambiar y se muestra tu último cálculo.
+• Corregido: la división (÷) ahora da el resultado correcto.

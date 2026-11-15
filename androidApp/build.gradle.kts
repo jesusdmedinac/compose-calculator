@@ -36,7 +36,7 @@ android {
         applicationId = "com.jesusdmedinac.compose.calculator"
         minSdk = (findProperty("android.minSdk") as String).toInt()
         targetSdk = (findProperty("android.targetSdk") as String).toInt()
-        versionCode = 1000009
+        versionCode = 1000010
         versionName = "1.1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

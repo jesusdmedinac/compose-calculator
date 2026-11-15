@@ -1024,6 +1024,3246 @@
           ]
         }
       ]
+    },
+    {
+      "type": "frame",
+      "id": "cIuX1",
+      "x": 1996,
+      "y": 0,
+      "name": "Material 3 Expressive · Calculadora",
+      "clip": true,
+      "width": 412,
+      "fill": "#FEF7FF",
+      "cornerRadius": 28,
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "jWYGS",
+          "name": "Barra de estado",
+          "width": "fill_container",
+          "height": 44,
+          "padding": [
+            0,
+            24
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "L9JrMX",
+              "name": "Hora",
+              "fill": "#1D1B20",
+              "content": "9:41",
+              "fontFamily": "Roboto Flex",
+              "fontSize": 14,
+              "fontWeight": "500"
+            },
+            {
+              "type": "frame",
+              "id": "N6PG0",
+              "name": "Indicadores",
+              "gap": 4,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "dtEhH",
+                  "name": "signal_cellular_alt",
+                  "width": 18,
+                  "height": 18,
+                  "icon": "signal_cellular_alt",
+                  "library": "Material Symbols Rounded",
+                  "fill": "#1D1B20"
+                },
+                {
+                  "type": "icon",
+                  "id": "W3C5e",
+                  "name": "wifi",
+                  "width": 18,
+                  "height": 18,
+                  "icon": "wifi",
+                  "library": "Material Symbols Rounded",
+                  "fill": "#1D1B20"
+                },
+                {
+                  "type": "icon",
+                  "id": "o7emZX",
+                  "name": "battery_full",
+                  "width": 18,
+                  "height": 18,
+                  "icon": "battery_full",
+                  "library": "Material Symbols Rounded",
+                  "fill": "#1D1B20"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "EwTjP",
+          "name": "Barra superior",
+          "width": "fill_container",
+          "padding": [
+            8,
+            16
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "e8AnBU",
+              "name": "Modo",
+              "fill": "#ECE6F0",
+              "cornerRadius": 24,
+              "gap": 4,
+              "padding": 4,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "fDt2K",
+                  "name": "Modo Básica",
+                  "fill": "#6E3BDB",
+                  "cornerRadius": 20,
+                  "gap": 6,
+                  "padding": [
+                    10,
+                    18
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "YrE68",
+                      "name": "Check",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "check",
+                      "library": "Material Symbols Rounded",
+                      "fill": "#FFFFFF"
+                    },
+                    {
+                      "type": "text",
+                      "id": "r5hRxp",
+                      "name": "Etiqueta Básica",
+                      "fill": "#FFFFFF",
+                      "content": "Básica",
+                      "fontFamily": "Roboto Flex",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "a7mem",
+                  "name": "Modo Científica",
+                  "fill": "#ECE6F0",
+                  "cornerRadius": 8,
+                  "gap": 6,
+                  "padding": [
+                    10,
+                    18
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "hU4gI",
+                      "name": "Etiqueta Científica",
+                      "fill": "#49454F",
+                      "content": "Científica",
+                      "fontFamily": "Roboto Flex",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "e9SFV",
+              "name": "Acciones",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "OUrT0",
+                  "name": "Botón history",
+                  "width": 48,
+                  "height": 48,
+                  "cornerRadius": 24,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "yogR8",
+                      "name": "Ícono history",
+                      "width": 24,
+                      "height": 24,
+                      "icon": "history",
+                      "library": "Material Symbols Rounded",
+                      "fill": "#49454F"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "SeqoO",
+                  "name": "Botón more_vert",
+                  "width": 48,
+                  "height": 48,
+                  "cornerRadius": 24,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "IZrCe",
+                      "name": "Ícono more_vert",
+                      "width": 24,
+                      "height": 24,
+                      "icon": "more_vert",
+                      "library": "Material Symbols Rounded",
+                      "fill": "#49454F"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "hV9zb",
+          "name": "Pantalla",
+          "width": "fill_container",
+          "height": 312,
+          "layout": "vertical",
+          "gap": 6,
+          "padding": [
+            16,
+            28,
+            28,
+            28
+          ],
+          "justifyContent": "end",
+          "alignItems": "end",
+          "children": [
+            {
+              "type": "text",
+              "id": "THEum",
+              "name": "Historial",
+              "fill": "#49454F",
+              "content": "12 × 7 = 84",
+              "fontFamily": "Roboto Flex",
+              "fontSize": 18,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "z2iFnx",
+              "name": "Expresión",
+              "fill": "#1D1B20",
+              "content": "1,280 ÷ 16 + 4",
+              "fontFamily": "Roboto Flex",
+              "fontSize": 40
+            },
+            {
+              "type": "frame",
+              "id": "jlQiY",
+              "name": "Resultado",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Hm3f5",
+                  "name": "Igual",
+                  "fill": "#49454F",
+                  "content": "=",
+                  "fontFamily": "Roboto Flex",
+                  "fontSize": 48,
+                  "fontWeight": "300"
+                },
+                {
+                  "type": "text",
+                  "id": "sKdYH",
+                  "name": "Valor",
+                  "fill": "#6E3BDB",
+                  "content": "84",
+                  "fontFamily": "Roboto Flex",
+                  "fontSize": 104,
+                  "fontWeight": "700"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "yGlpI",
+          "name": "Teclado",
+          "width": "fill_container",
+          "fill": "#F3EDF7",
+          "cornerRadius": [
+            40,
+            40,
+            0,
+            0
+          ],
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            24,
+            16,
+            12,
+            16
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "vxNgc",
+              "name": "Fila 1",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "SQ5Xu",
+                  "name": "Tecla AC",
+                  "width": 86,
+                  "height": 84,
+                  "fill": "#FFD9E7",
+                  "cornerRadius": 28,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "cDCay",
+                      "name": "Etiqueta AC",
+                      "fill": "#8C1D5A",
+                      "content": "AC",
+                      "fontFamily": "Roboto Flex",
+                      "fontSize": 26,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "NpWAo",
+                  "name": "Tecla ( )",
+                  "width": 86,
+                  "height": 84,
+                  "fill": "#FFD9E7",
+                  "cornerRadius": 28,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "vBiaF",
+                      "name": "Etiqueta ( )",
+                      "fill": "#8C1D5A",
+                      "content": "( )",
+                      "fontFamily": "Roboto Flex",
+                      "fontSize": 32,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "w5vy4",
+                  "name": "Tecla %",
+                  "width": 86,
+                  "height": 84,
+                  "fill": "#FFD9E7",
+                  "cornerRadius": 28,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "m1Gfj",
+                      "name": "Etiqueta %",
+                      "fill": "#8C1D5A",
+                      "content": "%",
+                      "fontFamily": "Roboto Flex",
+                      "fontSize": 32,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "mlfJS",
+                  "name": "Tecla ÷",
+                  "width": 86,
+                  "height": 84,
+                  "fill": "#EADDFF",
+                  "cornerRadius": 28,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "pNgrq",
+                      "name": "Etiqueta ÷",
+                      "fill": "#3B1E78",
+                      "content": "÷",
+                      "fontFamily": "Roboto Flex",
+                      "fontSize": 32,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "VcyCc",
+              "name": "Fila 2",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "JMBbz",
+                  "name": "Tecla 7",
+                  "width": 86,
+                  "height": 84,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 43,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "IyM61",
+                      "name": "Etiqueta 7",
+                      "fill": "#1D1B20",
+                      "content": "7",
+                      "fontFamily": "Roboto Flex",
+                      "fontSize": 32,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "nq2JQ",
+                  "name": "Tecla 8",
+                  "width": 86,
+                  "height": 84,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 43,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "JvwRb",
+                      "name": "Etiqueta 8",
+                      "fill": "#1D1B20",
+                      "content": "8",
+                      "fontFamily": "Roboto Flex",
+                      "fontSize": 32,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "B43Ivr",
+                  "name": "Tecla 9",
+                  "width": 86,
+                  "height": 84,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 43,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "SJJ5I",
+                      "name": "Etiqueta 9",
+                      "fill": "#1D1B20",
+                      "content": "9",
+                      "fontFamily": "Roboto Flex",
+                      "fontSize": 32,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "XMD51",
+                  "name": "Tecla ×",
+                  "width": 86,
+                  "height": 84,
+                  "fill": "#EADDFF",
+                  "cornerRadius": 28,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "tNL9B",
+                      "name": "Etiqueta ×",
+                      "fill": "#3B1E78",
+                      "content": "×",
+                      "fontFamily": "Roboto Flex",
+                      "fontSize": 32,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "G7rlM",
+              "name": "Fila 3",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "lmfMs",
+                  "name": "Tecla 4",
+                  "width": 86,
+                  "height": 84,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 43,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "eCoh4",
+                      "name": "Etiqueta 4",
+                      "fill": "#1D1B20",
+                      "content": "4",
+                      "fontFamily": "Roboto Flex",
+                      "fontSize": 32,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "OHxl4",
+                  "name": "Tecla 5",
+                  "width": 86,
+                  "height": 84,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 43,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Jo0nL",
+                      "name": "Etiqueta 5",
+                      "fill": "#1D1B20",
+                      "content": "5",
+                      "fontFamily": "Roboto Flex",
+                      "fontSize": 32,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "HZMqc",
+                  "name": "Tecla 6",
+                  "width": 86,
+                  "height": 84,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 43,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "YEAI8",
+                      "name": "Etiqueta 6",
+                      "fill": "#1D1B20",
+                      "content": "6",
+                      "fontFamily": "Roboto Flex",
+                      "fontSize": 32,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "dunW0",
+                  "name": "Tecla −",
+                  "width": 86,
+                  "height": 84,
+                  "fill": "#EADDFF",
+                  "cornerRadius": 28,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "c3QUSm",
+                      "name": "Etiqueta −",
+                      "fill": "#3B1E78",
+                      "content": "−",
+                      "fontFamily": "Roboto Flex",
+                      "fontSize": 32,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "y2hEh",
+              "name": "Fila 4",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "fa73I",
+                  "name": "Tecla 1",
+                  "width": 86,
+                  "height": 84,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 43,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "vaO6Z",
+                      "name": "Etiqueta 1",
+                      "fill": "#1D1B20",
+                      "content": "1",
+                      "fontFamily": "Roboto Flex",
+                      "fontSize": 32,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "L4Cl9",
+                  "name": "Tecla 2",
+                  "width": 86,
+                  "height": 84,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 43,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "p04dV",
+                      "name": "Etiqueta 2",
+                      "fill": "#1D1B20",
+                      "content": "2",
+                      "fontFamily": "Roboto Flex",
+                      "fontSize": 32,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "VYutR",
+                  "name": "Tecla 3",
+                  "width": 86,
+                  "height": 84,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 43,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "yednP",
+                      "name": "Etiqueta 3",
+                      "fill": "#1D1B20",
+                      "content": "3",
+                      "fontFamily": "Roboto Flex",
+                      "fontSize": 32,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Z8DajQ",
+                  "name": "Tecla +",
+                  "width": 86,
+                  "height": 84,
+                  "fill": "#6E3BDB",
+                  "cornerRadius": 18,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "zXxNb",
+                      "name": "Etiqueta +",
+                      "fill": "#FFFFFF",
+                      "content": "+",
+                      "fontFamily": "Roboto Flex",
+                      "fontSize": 32,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "RBlPj",
+              "name": "Fila 5",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Me6yv",
+                  "name": "Tecla 0",
+                  "width": 86,
+                  "height": 84,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 43,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "SuVnI",
+                      "name": "Etiqueta 0",
+                      "fill": "#1D1B20",
+                      "content": "0",
+                      "fontFamily": "Roboto Flex",
+                      "fontSize": 32,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "KDbaG",
+                  "name": "Tecla ,",
+                  "width": 86,
+                  "height": 84,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 43,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "QA5kU",
+                      "name": "Etiqueta ,",
+                      "fill": "#1D1B20",
+                      "content": ",",
+                      "fontFamily": "Roboto Flex",
+                      "fontSize": 32,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "j2cVFT",
+                  "name": "Tecla ⌫",
+                  "width": 86,
+                  "height": 84,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 43,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "XMt9I",
+                      "name": "Borrar",
+                      "width": 30,
+                      "height": 30,
+                      "icon": "backspace",
+                      "library": "Material Symbols Rounded",
+                      "fill": "#1D1B20"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "oj7SX",
+                  "name": "Tecla =",
+                  "width": 86,
+                  "height": 84,
+                  "fill": "#6E3BDB",
+                  "cornerRadius": 28,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "TPW4g",
+                      "name": "Etiqueta =",
+                      "fill": "#FFFFFF",
+                      "content": "=",
+                      "fontFamily": "Roboto Flex",
+                      "fontSize": 32,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Y4BQE",
+              "name": "Navegación por gestos",
+              "width": "fill_container",
+              "height": 20,
+              "justifyContent": "center",
+              "alignItems": "end",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 2,
+                  "id": "ZRgLs",
+                  "name": "Asa",
+                  "fill": "#1D1B2099",
+                  "width": 108,
+                  "height": 4
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "v8J46",
+      "x": 2528,
+      "y": 0,
+      "name": "iOS Liquid Glass · Calculadora",
+      "clip": true,
+      "width": 393,
+      "fill": [
+        "#120D1C",
+        {
+          "type": "gradient",
+          "gradientType": "radial",
+          "enabled": true,
+          "rotation": 0,
+          "size": {
+            "width": 1.3,
+            "height": 0.75
+          },
+          "colors": [
+            {
+              "color": "#4B1A8CE6",
+              "position": 0
+            },
+            {
+              "color": "#4B1A8C00",
+              "position": 1
+            }
+          ],
+          "center": {
+            "x": 0.15,
+            "y": 0.62
+          }
+        },
+        {
+          "type": "gradient",
+          "gradientType": "radial",
+          "enabled": true,
+          "rotation": 0,
+          "size": {
+            "width": 1.2,
+            "height": 0.6
+          },
+          "colors": [
+            {
+              "color": "#8C1450D9",
+              "position": 0
+            },
+            {
+              "color": "#8C145000",
+              "position": 1
+            }
+          ],
+          "center": {
+            "x": 0.9,
+            "y": 0.85
+          }
+        },
+        {
+          "type": "gradient",
+          "gradientType": "radial",
+          "enabled": true,
+          "rotation": 0,
+          "size": {
+            "width": 1,
+            "height": 0.5
+          },
+          "colors": [
+            {
+              "color": "#7A0F6E99",
+              "position": 0
+            },
+            {
+              "color": "#7A0F6E00",
+              "position": 1
+            }
+          ],
+          "center": {
+            "x": 0.8,
+            "y": 0.18
+          }
+        }
+      ],
+      "cornerRadius": 48,
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "DyKrf",
+          "name": "Barra de estado",
+          "width": "fill_container",
+          "height": 62,
+          "padding": [
+            0,
+            32,
+            0,
+            40
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "X7X9q",
+              "name": "Hora",
+              "fill": "#FFFFFF",
+              "content": "9:41",
+              "fontFamily": "Inter",
+              "fontSize": 17,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "VwAXS",
+              "name": "Indicadores",
+              "gap": 6,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "omGsP",
+                  "name": "signal",
+                  "width": 18,
+                  "height": 18,
+                  "icon": "signal",
+                  "library": "lucide",
+                  "fill": "#FFFFFF"
+                },
+                {
+                  "type": "icon",
+                  "id": "zSqAV",
+                  "name": "wifi",
+                  "width": 18,
+                  "height": 18,
+                  "icon": "wifi",
+                  "library": "lucide",
+                  "fill": "#FFFFFF"
+                },
+                {
+                  "type": "icon",
+                  "id": "AxLed",
+                  "name": "battery-full",
+                  "width": 18,
+                  "height": 18,
+                  "icon": "battery-full",
+                  "library": "lucide",
+                  "fill": "#FFFFFF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "c1MoAM",
+          "name": "Barra de herramientas",
+          "width": "fill_container",
+          "padding": [
+            4,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "GTpzs",
+              "name": "Botón historial",
+              "width": 44,
+              "height": 44,
+              "fill": "#FFFFFF1A",
+              "cornerRadius": 22,
+              "stroke": {
+                "type": "gradient",
+                "gradientType": "linear",
+                "enabled": true,
+                "rotation": 180,
+                "size": {
+                  "height": 1
+                },
+                "colors": [
+                  {
+                    "color": "#FFFFFF8C",
+                    "position": 0
+                  },
+                  {
+                    "color": "#FFFFFF14",
+                    "position": 0.6
+                  },
+                  {
+                    "color": "#FFFFFF33",
+                    "position": 1
+                  }
+                ]
+              },
+              "strokeWidth": 1,
+              "strokeAlignment": "inner",
+              "effect": [
+                {
+                  "type": "background_blur",
+                  "radius": 24
+                },
+                {
+                  "type": "shadow",
+                  "shadowType": "outer",
+                  "color": "#0000004D",
+                  "offset": {
+                    "x": 0,
+                    "y": 10
+                  },
+                  "blur": 28
+                }
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "b71Ta",
+                  "name": "Ícono historial",
+                  "width": 20,
+                  "height": 20,
+                  "icon": "history",
+                  "library": "lucide",
+                  "fill": "#FFFFFF"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "meFtH",
+              "name": "Selector de modo",
+              "height": 44,
+              "fill": "#FFFFFF1A",
+              "cornerRadius": 22,
+              "stroke": {
+                "type": "gradient",
+                "gradientType": "linear",
+                "enabled": true,
+                "rotation": 180,
+                "size": {
+                  "height": 1
+                },
+                "colors": [
+                  {
+                    "color": "#FFFFFF8C",
+                    "position": 0
+                  },
+                  {
+                    "color": "#FFFFFF14",
+                    "position": 0.6
+                  },
+                  {
+                    "color": "#FFFFFF33",
+                    "position": 1
+                  }
+                ]
+              },
+              "strokeWidth": 1,
+              "strokeAlignment": "inner",
+              "effect": [
+                {
+                  "type": "background_blur",
+                  "radius": 24
+                },
+                {
+                  "type": "shadow",
+                  "shadowType": "outer",
+                  "color": "#0000004D",
+                  "offset": {
+                    "x": 0,
+                    "y": 10
+                  },
+                  "blur": 28
+                }
+              ],
+              "gap": 6,
+              "padding": [
+                0,
+                16
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "N1MUbi",
+                  "name": "Modo",
+                  "fill": "#FFFFFF",
+                  "content": "Básica",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "icon",
+                  "id": "aQku8",
+                  "name": "Chevron",
+                  "width": 16,
+                  "height": 16,
+                  "icon": "chevron-down",
+                  "library": "lucide",
+                  "fill": "#FFFFFFB3"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ymkei",
+          "name": "Pantalla",
+          "width": "fill_container",
+          "height": 300,
+          "layout": "vertical",
+          "gap": 4,
+          "padding": [
+            0,
+            32,
+            20,
+            32
+          ],
+          "justifyContent": "end",
+          "alignItems": "end",
+          "children": [
+            {
+              "type": "text",
+              "id": "sJnv9",
+              "name": "Expresión",
+              "fill": "#FFFFFFA6",
+              "content": "1,280 ÷ 16 + 4",
+              "fontFamily": "Inter",
+              "fontSize": 30
+            },
+            {
+              "type": "text",
+              "id": "CpGIg",
+              "name": "Resultado",
+              "fill": "#FFFFFF",
+              "content": "84",
+              "fontFamily": "Inter",
+              "fontSize": 104,
+              "fontWeight": "300"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "d71DX",
+          "name": "Teclado",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 14,
+          "padding": [
+            8,
+            20,
+            0,
+            20
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "l9bBOt",
+              "name": "Fila 1",
+              "width": "fill_container",
+              "gap": 14,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "YBgMD",
+                  "name": "Tecla ⌫",
+                  "width": 77,
+                  "height": 77,
+                  "fill": "#FFFFFF40",
+                  "cornerRadius": 38.5,
+                  "stroke": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 180,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#FFFFFF8C",
+                        "position": 0
+                      },
+                      {
+                        "color": "#FFFFFF14",
+                        "position": 0.6
+                      },
+                      {
+                        "color": "#FFFFFF33",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 24
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#0000004D",
+                      "offset": {
+                        "x": 0,
+                        "y": 10
+                      },
+                      "blur": 28
+                    }
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "ItWV7",
+                      "name": "Borrar",
+                      "width": 28,
+                      "height": 28,
+                      "icon": "delete",
+                      "library": "lucide",
+                      "fill": "#FFFFFF"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "pzYna",
+                  "name": "Tecla AC",
+                  "width": 77,
+                  "height": 77,
+                  "fill": "#FFFFFF40",
+                  "cornerRadius": 38.5,
+                  "stroke": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 180,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#FFFFFF8C",
+                        "position": 0
+                      },
+                      {
+                        "color": "#FFFFFF14",
+                        "position": 0.6
+                      },
+                      {
+                        "color": "#FFFFFF33",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 24
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#0000004D",
+                      "offset": {
+                        "x": 0,
+                        "y": 10
+                      },
+                      "blur": 28
+                    }
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "E8Gcw",
+                      "name": "Etiqueta AC",
+                      "fill": "#FFFFFF",
+                      "content": "AC",
+                      "fontFamily": "Inter",
+                      "fontSize": 26
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ebnFz",
+                  "name": "Tecla %",
+                  "width": 77,
+                  "height": 77,
+                  "fill": "#FFFFFF40",
+                  "cornerRadius": 38.5,
+                  "stroke": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 180,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#FFFFFF8C",
+                        "position": 0
+                      },
+                      {
+                        "color": "#FFFFFF14",
+                        "position": 0.6
+                      },
+                      {
+                        "color": "#FFFFFF33",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 24
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#0000004D",
+                      "offset": {
+                        "x": 0,
+                        "y": 10
+                      },
+                      "blur": 28
+                    }
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "cUoU0",
+                      "name": "Etiqueta %",
+                      "fill": "#FFFFFF",
+                      "content": "%",
+                      "fontFamily": "Inter",
+                      "fontSize": 34
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "hLxpW",
+                  "name": "Tecla ÷",
+                  "width": 77,
+                  "height": 77,
+                  "fill": "#8A4DFF8C",
+                  "cornerRadius": 38.5,
+                  "stroke": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 180,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#FFFFFF8C",
+                        "position": 0
+                      },
+                      {
+                        "color": "#FFFFFF14",
+                        "position": 0.6
+                      },
+                      {
+                        "color": "#FFFFFF33",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 24
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#0000004D",
+                      "offset": {
+                        "x": 0,
+                        "y": 10
+                      },
+                      "blur": 28
+                    }
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "R0fk3",
+                      "name": "Etiqueta ÷",
+                      "fill": "#FFFFFF",
+                      "content": "÷",
+                      "fontFamily": "Inter",
+                      "fontSize": 34
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "s4f6M",
+              "name": "Fila 2",
+              "width": "fill_container",
+              "gap": 14,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "uIG44",
+                  "name": "Tecla 7",
+                  "width": 77,
+                  "height": 77,
+                  "fill": "#FFFFFF1F",
+                  "cornerRadius": 38.5,
+                  "stroke": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 180,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#FFFFFF8C",
+                        "position": 0
+                      },
+                      {
+                        "color": "#FFFFFF14",
+                        "position": 0.6
+                      },
+                      {
+                        "color": "#FFFFFF33",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 24
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#0000004D",
+                      "offset": {
+                        "x": 0,
+                        "y": 10
+                      },
+                      "blur": 28
+                    }
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "IqIng",
+                      "name": "Etiqueta 7",
+                      "fill": "#FFFFFF",
+                      "content": "7",
+                      "fontFamily": "Inter",
+                      "fontSize": 34
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "m3uDJB",
+                  "name": "Tecla 8",
+                  "width": 77,
+                  "height": 77,
+                  "fill": "#FFFFFF1F",
+                  "cornerRadius": 38.5,
+                  "stroke": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 180,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#FFFFFF8C",
+                        "position": 0
+                      },
+                      {
+                        "color": "#FFFFFF14",
+                        "position": 0.6
+                      },
+                      {
+                        "color": "#FFFFFF33",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 24
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#0000004D",
+                      "offset": {
+                        "x": 0,
+                        "y": 10
+                      },
+                      "blur": 28
+                    }
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "D11zw1",
+                      "name": "Etiqueta 8",
+                      "fill": "#FFFFFF",
+                      "content": "8",
+                      "fontFamily": "Inter",
+                      "fontSize": 34
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Jfwrh",
+                  "name": "Tecla 9",
+                  "width": 77,
+                  "height": 77,
+                  "fill": "#FFFFFF1F",
+                  "cornerRadius": 38.5,
+                  "stroke": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 180,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#FFFFFF8C",
+                        "position": 0
+                      },
+                      {
+                        "color": "#FFFFFF14",
+                        "position": 0.6
+                      },
+                      {
+                        "color": "#FFFFFF33",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 24
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#0000004D",
+                      "offset": {
+                        "x": 0,
+                        "y": 10
+                      },
+                      "blur": 28
+                    }
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "vG38j",
+                      "name": "Etiqueta 9",
+                      "fill": "#FFFFFF",
+                      "content": "9",
+                      "fontFamily": "Inter",
+                      "fontSize": 34
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Jk7h4",
+                  "name": "Tecla ×",
+                  "width": 77,
+                  "height": 77,
+                  "fill": "#8A4DFF8C",
+                  "cornerRadius": 38.5,
+                  "stroke": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 180,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#FFFFFF8C",
+                        "position": 0
+                      },
+                      {
+                        "color": "#FFFFFF14",
+                        "position": 0.6
+                      },
+                      {
+                        "color": "#FFFFFF33",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 24
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#0000004D",
+                      "offset": {
+                        "x": 0,
+                        "y": 10
+                      },
+                      "blur": 28
+                    }
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "CASWy",
+                      "name": "Etiqueta ×",
+                      "fill": "#FFFFFF",
+                      "content": "×",
+                      "fontFamily": "Inter",
+                      "fontSize": 34
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "vffUA",
+              "name": "Fila 3",
+              "width": "fill_container",
+              "gap": 14,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "kCpqA",
+                  "name": "Tecla 4",
+                  "width": 77,
+                  "height": 77,
+                  "fill": "#FFFFFF1F",
+                  "cornerRadius": 38.5,
+                  "stroke": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 180,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#FFFFFF8C",
+                        "position": 0
+                      },
+                      {
+                        "color": "#FFFFFF14",
+                        "position": 0.6
+                      },
+                      {
+                        "color": "#FFFFFF33",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 24
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#0000004D",
+                      "offset": {
+                        "x": 0,
+                        "y": 10
+                      },
+                      "blur": 28
+                    }
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "YGXY8",
+                      "name": "Etiqueta 4",
+                      "fill": "#FFFFFF",
+                      "content": "4",
+                      "fontFamily": "Inter",
+                      "fontSize": 34
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "RmF3x",
+                  "name": "Tecla 5",
+                  "width": 77,
+                  "height": 77,
+                  "fill": "#FFFFFF1F",
+                  "cornerRadius": 38.5,
+                  "stroke": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 180,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#FFFFFF8C",
+                        "position": 0
+                      },
+                      {
+                        "color": "#FFFFFF14",
+                        "position": 0.6
+                      },
+                      {
+                        "color": "#FFFFFF33",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 24
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#0000004D",
+                      "offset": {
+                        "x": 0,
+                        "y": 10
+                      },
+                      "blur": 28
+                    }
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "CyZTG",
+                      "name": "Etiqueta 5",
+                      "fill": "#FFFFFF",
+                      "content": "5",
+                      "fontFamily": "Inter",
+                      "fontSize": 34
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "EH8S6",
+                  "name": "Tecla 6",
+                  "width": 77,
+                  "height": 77,
+                  "fill": "#FFFFFF1F",
+                  "cornerRadius": 38.5,
+                  "stroke": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 180,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#FFFFFF8C",
+                        "position": 0
+                      },
+                      {
+                        "color": "#FFFFFF14",
+                        "position": 0.6
+                      },
+                      {
+                        "color": "#FFFFFF33",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 24
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#0000004D",
+                      "offset": {
+                        "x": 0,
+                        "y": 10
+                      },
+                      "blur": 28
+                    }
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "bUo34",
+                      "name": "Etiqueta 6",
+                      "fill": "#FFFFFF",
+                      "content": "6",
+                      "fontFamily": "Inter",
+                      "fontSize": 34
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "KMwkL",
+                  "name": "Tecla −",
+                  "width": 77,
+                  "height": 77,
+                  "fill": "#8A4DFF8C",
+                  "cornerRadius": 38.5,
+                  "stroke": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 180,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#FFFFFF8C",
+                        "position": 0
+                      },
+                      {
+                        "color": "#FFFFFF14",
+                        "position": 0.6
+                      },
+                      {
+                        "color": "#FFFFFF33",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 24
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#0000004D",
+                      "offset": {
+                        "x": 0,
+                        "y": 10
+                      },
+                      "blur": 28
+                    }
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "lnFtJ",
+                      "name": "Etiqueta −",
+                      "fill": "#FFFFFF",
+                      "content": "−",
+                      "fontFamily": "Inter",
+                      "fontSize": 34
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "lqqVr",
+              "name": "Fila 4",
+              "width": "fill_container",
+              "gap": 14,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "kJN06",
+                  "name": "Tecla 1",
+                  "width": 77,
+                  "height": 77,
+                  "fill": "#FFFFFF1F",
+                  "cornerRadius": 38.5,
+                  "stroke": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 180,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#FFFFFF8C",
+                        "position": 0
+                      },
+                      {
+                        "color": "#FFFFFF14",
+                        "position": 0.6
+                      },
+                      {
+                        "color": "#FFFFFF33",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 24
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#0000004D",
+                      "offset": {
+                        "x": 0,
+                        "y": 10
+                      },
+                      "blur": 28
+                    }
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "W1Rr6",
+                      "name": "Etiqueta 1",
+                      "fill": "#FFFFFF",
+                      "content": "1",
+                      "fontFamily": "Inter",
+                      "fontSize": 34
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "j816U",
+                  "name": "Tecla 2",
+                  "width": 77,
+                  "height": 77,
+                  "fill": "#FFFFFF1F",
+                  "cornerRadius": 38.5,
+                  "stroke": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 180,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#FFFFFF8C",
+                        "position": 0
+                      },
+                      {
+                        "color": "#FFFFFF14",
+                        "position": 0.6
+                      },
+                      {
+                        "color": "#FFFFFF33",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 24
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#0000004D",
+                      "offset": {
+                        "x": 0,
+                        "y": 10
+                      },
+                      "blur": 28
+                    }
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Pq90P",
+                      "name": "Etiqueta 2",
+                      "fill": "#FFFFFF",
+                      "content": "2",
+                      "fontFamily": "Inter",
+                      "fontSize": 34
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "f6rfEo",
+                  "name": "Tecla 3",
+                  "width": 77,
+                  "height": 77,
+                  "fill": "#FFFFFF1F",
+                  "cornerRadius": 38.5,
+                  "stroke": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 180,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#FFFFFF8C",
+                        "position": 0
+                      },
+                      {
+                        "color": "#FFFFFF14",
+                        "position": 0.6
+                      },
+                      {
+                        "color": "#FFFFFF33",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 24
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#0000004D",
+                      "offset": {
+                        "x": 0,
+                        "y": 10
+                      },
+                      "blur": 28
+                    }
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "bv8ci",
+                      "name": "Etiqueta 3",
+                      "fill": "#FFFFFF",
+                      "content": "3",
+                      "fontFamily": "Inter",
+                      "fontSize": 34
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "DlAbQ",
+                  "name": "Tecla +",
+                  "width": 77,
+                  "height": 77,
+                  "fill": "#FFFFFFF2",
+                  "cornerRadius": 38.5,
+                  "stroke": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 180,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#FFFFFF8C",
+                        "position": 0
+                      },
+                      {
+                        "color": "#FFFFFF14",
+                        "position": 0.6
+                      },
+                      {
+                        "color": "#FFFFFF33",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 24
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#0000004D",
+                      "offset": {
+                        "x": 0,
+                        "y": 10
+                      },
+                      "blur": 28
+                    }
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "VSdkr",
+                      "name": "Etiqueta +",
+                      "fill": "#8A4DFF",
+                      "content": "+",
+                      "fontFamily": "Inter",
+                      "fontSize": 34,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "CiuZH",
+              "name": "Fila 5",
+              "width": "fill_container",
+              "gap": 14,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "kIptk",
+                  "name": "Tecla ( )",
+                  "width": 77,
+                  "height": 77,
+                  "fill": "#FFFFFF1F",
+                  "cornerRadius": 38.5,
+                  "stroke": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 180,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#FFFFFF8C",
+                        "position": 0
+                      },
+                      {
+                        "color": "#FFFFFF14",
+                        "position": 0.6
+                      },
+                      {
+                        "color": "#FFFFFF33",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 24
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#0000004D",
+                      "offset": {
+                        "x": 0,
+                        "y": 10
+                      },
+                      "blur": 28
+                    }
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Gqtxg",
+                      "name": "Etiqueta ( )",
+                      "fill": "#FFFFFF",
+                      "content": "( )",
+                      "fontFamily": "Inter",
+                      "fontSize": 26
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Z5Rjo",
+                  "name": "Tecla 0",
+                  "width": 77,
+                  "height": 77,
+                  "fill": "#FFFFFF1F",
+                  "cornerRadius": 38.5,
+                  "stroke": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 180,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#FFFFFF8C",
+                        "position": 0
+                      },
+                      {
+                        "color": "#FFFFFF14",
+                        "position": 0.6
+                      },
+                      {
+                        "color": "#FFFFFF33",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 24
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#0000004D",
+                      "offset": {
+                        "x": 0,
+                        "y": 10
+                      },
+                      "blur": 28
+                    }
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "jq1LP",
+                      "name": "Etiqueta 0",
+                      "fill": "#FFFFFF",
+                      "content": "0",
+                      "fontFamily": "Inter",
+                      "fontSize": 34
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "d924xN",
+                  "name": "Tecla ,",
+                  "width": 77,
+                  "height": 77,
+                  "fill": "#FFFFFF1F",
+                  "cornerRadius": 38.5,
+                  "stroke": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 180,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#FFFFFF8C",
+                        "position": 0
+                      },
+                      {
+                        "color": "#FFFFFF14",
+                        "position": 0.6
+                      },
+                      {
+                        "color": "#FFFFFF33",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 24
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#0000004D",
+                      "offset": {
+                        "x": 0,
+                        "y": 10
+                      },
+                      "blur": 28
+                    }
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ZWqTq",
+                      "name": "Etiqueta ,",
+                      "fill": "#FFFFFF",
+                      "content": ",",
+                      "fontFamily": "Inter",
+                      "fontSize": 34
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "gXjy3",
+                  "name": "Tecla =",
+                  "width": 77,
+                  "height": 77,
+                  "fill": "#ED158ABF",
+                  "cornerRadius": 38.5,
+                  "stroke": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 180,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#FFFFFF8C",
+                        "position": 0
+                      },
+                      {
+                        "color": "#FFFFFF14",
+                        "position": 0.6
+                      },
+                      {
+                        "color": "#FFFFFF33",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "effect": [
+                    {
+                      "type": "background_blur",
+                      "radius": 24
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#0000004D",
+                      "offset": {
+                        "x": 0,
+                        "y": 10
+                      },
+                      "blur": 28
+                    }
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Kfbx3",
+                      "name": "Etiqueta =",
+                      "fill": "#FFFFFF",
+                      "content": "=",
+                      "fontFamily": "Inter",
+                      "fontSize": 34
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "fOSs8",
+          "name": "Indicador de inicio",
+          "width": "fill_container",
+          "height": 34,
+          "padding": [
+            0,
+            0,
+            8,
+            0
+          ],
+          "justifyContent": "center",
+          "alignItems": "end",
+          "children": [
+            {
+              "type": "rectangle",
+              "cornerRadius": 3,
+              "id": "RzYgI",
+              "name": "Barra",
+              "fill": "#FFFFFF",
+              "width": 134,
+              "height": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "gjFvQ",
+      "x": 0,
+      "y": 1441,
+      "name": "Play · Gráfico de funciones (es-419)",
+      "clip": true,
+      "width": 1024,
+      "height": 500,
+      "fill": [
+        "#16111F",
+        {
+          "type": "gradient",
+          "gradientType": "radial",
+          "enabled": true,
+          "rotation": 0,
+          "size": {
+            "width": 0.75,
+            "height": 1.4
+          },
+          "colors": [
+            {
+              "color": "#8A4DFF8C",
+              "position": 0
+            },
+            {
+              "color": "#8A4DFF00",
+              "position": 1
+            }
+          ],
+          "center": {
+            "x": 0.22,
+            "y": 0.55
+          }
+        },
+        {
+          "type": "gradient",
+          "gradientType": "radial",
+          "enabled": true,
+          "rotation": 0,
+          "size": {
+            "width": 0.8,
+            "height": 1.2
+          },
+          "colors": [
+            {
+              "color": "#ED158A73",
+              "position": 0
+            },
+            {
+              "color": "#ED158A00",
+              "position": 1
+            }
+          ],
+          "center": {
+            "x": 0.95,
+            "y": 1
+          }
+        }
+      ],
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "SWxPX",
+          "x": 70,
+          "y": 95,
+          "name": "Cubo",
+          "width": 310,
+          "height": 310,
+          "layout": "none",
+          "children": [
+            {
+              "type": "path",
+              "id": "FcYcK",
+              "x": 0,
+              "y": 0,
+              "name": "Cara superior",
+              "geometry": "M54 24l26 15-26 15-26-15z",
+              "viewBox": [
+                22,
+                22,
+                64,
+                64
+              ],
+              "fill": "#8A4DFF",
+              "width": 310,
+              "height": 310
+            },
+            {
+              "type": "path",
+              "id": "Dq7PK",
+              "x": 0,
+              "y": 0,
+              "name": "Cara izquierda",
+              "geometry": "M28 39l26 15v30l-26-15z",
+              "viewBox": [
+                22,
+                22,
+                64,
+                64
+              ],
+              "fill": "#CD00EC",
+              "width": 310,
+              "height": 310
+            },
+            {
+              "type": "path",
+              "id": "B9eYsy",
+              "x": 0,
+              "y": 0,
+              "name": "Cara derecha",
+              "geometry": "M80 39l-26 15v30l26-15z",
+              "viewBox": [
+                22,
+                22,
+                64,
+                64
+              ],
+              "fill": "#ED158A",
+              "width": 310,
+              "height": 310
+            },
+            {
+              "type": "path",
+              "id": "DQnb7",
+              "x": 0,
+              "y": 0,
+              "name": "Más",
+              "geometry": "M52.5 33.5l0 11a1.5 1.5 0 0 0 3 0l0-11a1.5 1.5 0 0 0-3 0z m-4 7l11 0a1.5 1.5 0 0 0 0-3l-11 0a1.5 1.5 0 0 0 0 3z",
+              "viewBox": [
+                22,
+                22,
+                64,
+                64
+              ],
+              "fill": "#FFFFFF",
+              "width": 310,
+              "height": 310
+            },
+            {
+              "type": "path",
+              "id": "H04pGj",
+              "x": 0,
+              "y": 0,
+              "name": "Por",
+              "geometry": "M34.93934 61.06066l8 8a1.5 1.5 0 0 0 2.12132-2.12132l-8-8a1.5 1.5 0 0 0-2.12132 2.12132z m8-2.12132l-8 8a1.5 1.5 0 0 0 2.12132 2.12132l8-8a1.5 1.5 0 0 0-2.12132-2.12132z",
+              "viewBox": [
+                22,
+                22,
+                64,
+                64
+              ],
+              "fill": "#FFFFFF",
+              "width": 310,
+              "height": 310
+            },
+            {
+              "type": "path",
+              "id": "AkGce",
+              "x": 0,
+              "y": 0,
+              "name": "Igual",
+              "geometry": "M63.55709 61.89272l10-4a1.5 1.5 0 0 0-1.11418-2.78544l-10 4a1.5 1.5 0 0 0 1.11418 2.78544z m0 7l10-4a1.5 1.5 0 0 0-1.11418-2.78544l-10 4a1.5 1.5 0 0 0 1.11418 2.78544z",
+              "viewBox": [
+                22,
+                22,
+                64,
+                64
+              ],
+              "fill": "#FFFFFF",
+              "width": 310,
+              "height": 310
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "cuQGE",
+          "x": 430,
+          "y": 122,
+          "name": "Texto",
+          "width": 480,
+          "layout": "vertical",
+          "gap": 14,
+          "children": [
+            {
+              "type": "text",
+              "id": "IXxKH",
+              "name": "Título",
+              "fill": "#FFFFFF",
+              "content": "Compose Calculator",
+              "fontFamily": "Roboto Flex",
+              "fontSize": 54,
+              "fontWeight": "700",
+              "letterSpacing": -1
+            },
+            {
+              "type": "text",
+              "id": "m1CyZQ",
+              "name": "Frase",
+              "fill": "#CFBCFF",
+              "content": "Rápida, privada y sin anuncios",
+              "fontFamily": "Roboto Flex",
+              "fontSize": 30
+            },
+            {
+              "type": "frame",
+              "id": "HBnj4",
+              "name": "Teclas",
+              "gap": 18,
+              "padding": [
+                22,
+                0,
+                0,
+                0
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "FBLrH",
+                  "name": "Tecla número",
+                  "width": 92,
+                  "height": 92,
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "path",
+                      "id": "ik0Pl",
+                      "x": 0,
+                      "y": 0,
+                      "name": "Tecla número · Forma",
+                      "geometry": "M100 50l-0.07 2.62-0.2 2.61-0.35 2.59-0.47 2.58-0.61 2.54-0.75 2.51-0.87 2.47-1 2.42-1.13 2.36-1.25 2.3-1.37 2.23-1.48 2.16-1.59 2.08-1.7 1.99-1.8 1.9-1.9 1.8-1.99 1.7-2.08 1.59-2.16 1.48-2.23 1.37-2.3 1.25-2.36 1.13-2.42 1-2.47 0.87-2.51 0.75-2.54 0.61-2.58 0.47-2.59 0.35-2.61 0.2-2.62 0.07-2.62-0.07-2.61-0.2-2.59-0.35-2.58-0.47-2.54-0.61-2.51-0.75-2.47-0.87-2.42-1-2.36-1.13-2.3-1.25-2.23-1.37-2.16-1.48-2.08-1.59-1.99-1.7-1.9-1.8-1.8-1.9-1.7-1.99-1.59-2.08-1.48-2.16-1.37-2.23-1.25-2.3-1.13-2.36-1-2.42-0.87-2.47-0.75-2.51-0.61-2.54-0.47-2.58-0.35-2.59-0.2-2.61-0.07-2.62 0.07-2.62 0.2-2.61 0.35-2.59 0.47-2.58 0.61-2.54 0.75-2.51 0.87-2.47 1-2.42 1.13-2.36 1.25-2.3 1.37-2.23 1.48-2.16 1.59-2.08 1.7-1.99 1.8-1.9 1.9-1.8 1.99-1.7 2.08-1.59 2.16-1.48 2.23-1.37 2.3-1.25 2.36-1.13 2.42-1 2.47-0.87 2.51-0.75 2.54-0.61 2.58-0.47 2.59-0.35 2.61-0.2 2.62-0.07 2.62 0.07 2.61 0.2 2.59 0.35 2.58 0.47 2.54 0.61 2.51 0.75 2.47 0.87 2.42 1 2.36 1.13 2.3 1.25 2.23 1.37 2.16 1.48 2.08 1.59 1.99 1.7 1.9 1.8 1.8 1.9 1.7 1.99 1.59 2.08 1.48 2.16 1.37 2.23 1.25 2.3 1.13 2.36 1 2.42 0.87 2.47 0.75 2.51 0.61 2.54 0.47 2.58 0.35 2.59 0.2 2.61z",
+                      "viewBox": [
+                        0,
+                        0,
+                        100,
+                        100
+                      ],
+                      "fill": "#FFFFFF",
+                      "width": 92,
+                      "height": 92
+                    },
+                    {
+                      "type": "text",
+                      "id": "Le1aO",
+                      "x": 0,
+                      "y": -2,
+                      "name": "Tecla número · Etiqueta",
+                      "fill": "#1D1B20",
+                      "textGrowth": "fixed-width-height",
+                      "width": 92,
+                      "height": 92,
+                      "content": "7",
+                      "textAlign": "center",
+                      "textAlignVertical": "middle",
+                      "fontFamily": "Roboto Flex",
+                      "fontSize": 40,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "QUPP2",
+                  "name": "Tecla activa",
+                  "width": 92,
+                  "height": 92,
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "path",
+                      "id": "SclLF",
+                      "x": 0,
+                      "y": 0,
+                      "name": "Tecla activa · Forma",
+                      "geometry": "M100 50l-0.37 2.6-1.06 2.51-1.57 2.33-1.87 2.15-1.9 1.99-1.7 1.91-1.31 1.95-0.87 2.08-0.44 2.31-0.16 2.55-0.06 2.75-0.2 2.84-0.53 2.77-1.03 2.51-1.57 2.11-2.11 1.57-2.51 1.03-2.77 0.53-2.84 0.2-2.75 0.06-2.55 0.16-2.31 0.44-2.08 0.87-1.95 1.31-1.91 1.7-1.99 1.9-2.15 1.87-2.33 1.57-2.51 1.06-2.6 0.37-2.6-0.37-2.51-1.06-2.33-1.57-2.15-1.87-1.99-1.9-1.91-1.7-1.95-1.31-2.08-0.87-2.31-0.44-2.54-0.16-2.76-0.06-2.84-0.2-2.77-0.53-2.51-1.03-2.11-1.57-1.57-2.11-1.03-2.51-0.53-2.77-0.2-2.84-0.06-2.75-0.16-2.55-0.44-2.31-0.87-2.08-1.31-1.95-1.7-1.91-1.9-1.99-1.87-2.15-1.57-2.33-1.06-2.51-0.37-2.6 0.37-2.6 1.06-2.51 1.57-2.33 1.87-2.15 1.9-1.99 1.7-1.91 1.31-1.95 0.87-2.08 0.44-2.31 0.16-2.54 0.06-2.76 0.2-2.84 0.53-2.77 1.03-2.51 1.57-2.11 2.11-1.57 2.51-1.03 2.77-0.53 2.84-0.2 2.75-0.06 2.55-0.16 2.31-0.44 2.08-0.87 1.95-1.31 1.91-1.7 1.99-1.9 2.15-1.87 2.33-1.57 2.51-1.06 2.6-0.37 2.6 0.37 2.51 1.06 2.33 1.57 2.15 1.87 1.99 1.9 1.91 1.7 1.95 1.31 2.08 0.87 2.31 0.44 2.55 0.16 2.75 0.06 2.84 0.2 2.77 0.53 2.51 1.03 2.11 1.57 1.57 2.11 1.03 2.51 0.53 2.77 0.2 2.84 0.06 2.76 0.16 2.54 0.44 2.31 0.87 2.08 1.31 1.95 1.7 1.91 1.9 1.99 1.87 2.15 1.57 2.33 1.06 2.51z",
+                      "viewBox": [
+                        0,
+                        0,
+                        100,
+                        100
+                      ],
+                      "fill": "#6E3BDB",
+                      "width": 92,
+                      "height": 92
+                    },
+                    {
+                      "type": "text",
+                      "id": "vXjqW",
+                      "x": 0,
+                      "y": -6,
+                      "name": "Tecla activa · Etiqueta",
+                      "fill": "#FFFFFF",
+                      "textGrowth": "fixed-width-height",
+                      "width": 92,
+                      "height": 92,
+                      "content": "+",
+                      "textAlign": "center",
+                      "textAlignVertical": "middle",
+                      "fontFamily": "Roboto Flex",
+                      "fontSize": 64,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "e1WQe",
+                  "name": "Tecla igual",
+                  "width": 92,
+                  "height": 92,
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "path",
+                      "id": "C4kb1x",
+                      "x": 0,
+                      "y": 0,
+                      "name": "Tecla igual · Forma",
+                      "geometry": "M100 50l0 2.62 0 2.63-0.02 2.67-0.03 2.7-0.07 2.75-0.12 2.8-0.19 2.86-0.3 2.91-0.43 2.94-0.61 2.97-0.82 2.94-1.09 2.86-1.38 2.74-1.69 2.55-2.01 2.3-2.3 2.01-2.55 1.69-2.74 1.38-2.86 1.09-2.94 0.82-2.97 0.61-2.94 0.43-2.91 0.3-2.86 0.19-2.8 0.12-2.75 0.07-2.7 0.03-2.67 0.02-2.63 0-2.62 0-2.62 0-2.63 0-2.67-0.02-2.7-0.03-2.75-0.07-2.8-0.12-2.86-0.19-2.91-0.3-2.94-0.43-2.97-0.61-2.94-0.82-2.86-1.09-2.74-1.38-2.55-1.69-2.3-2.01-2.01-2.3-1.69-2.55-1.38-2.74-1.09-2.86-0.82-2.94-0.61-2.97-0.43-2.94-0.3-2.91-0.19-2.86-0.12-2.8-0.07-2.75-0.03-2.7-0.02-2.67 0-2.63 0-2.62 0-2.62 0-2.63 0.02-2.67 0.03-2.7 0.07-2.75 0.12-2.8 0.19-2.86 0.3-2.91 0.43-2.94 0.61-2.97 0.82-2.94 1.09-2.86 1.38-2.74 1.69-2.55 2.01-2.3 2.3-2.01 2.55-1.69 2.74-1.38 2.86-1.09 2.94-0.82 2.97-0.61 2.94-0.43 2.91-0.3 2.86-0.19 2.8-0.12 2.75-0.07 2.7-0.03 2.67-0.02 2.63 0 2.62 0 2.62 0 2.63 0 2.67 0.02 2.7 0.03 2.75 0.07 2.8 0.12 2.86 0.19 2.91 0.3 2.94 0.43 2.97 0.61 2.94 0.82 2.86 1.09 2.74 1.38 2.55 1.69 2.3 2.01 2.01 2.3 1.69 2.55 1.38 2.74 1.09 2.86 0.82 2.94 0.61 2.97 0.43 2.94 0.3 2.91 0.19 2.86 0.12 2.8 0.07 2.75 0.03 2.7 0.02 2.67 0 2.63z",
+                      "viewBox": [
+                        0,
+                        0,
+                        100,
+                        100
+                      ],
+                      "fill": "#ED158A",
+                      "width": 92,
+                      "height": 92
+                    },
+                    {
+                      "type": "text",
+                      "id": "qFqFk",
+                      "x": 0,
+                      "y": -6,
+                      "name": "Tecla igual · Etiqueta",
+                      "fill": "#FFFFFF",
+                      "textGrowth": "fixed-width-height",
+                      "width": 92,
+                      "height": 92,
+                      "content": "=",
+                      "textAlign": "center",
+                      "textAlignVertical": "middle",
+                      "fontFamily": "Roboto Flex",
+                      "fontSize": 64,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "LKXSr",
+      "x": 1104,
+      "y": 1441,
+      "name": "Play · Feature graphic (en-US)",
+      "clip": true,
+      "width": 1024,
+      "height": 500,
+      "fill": [
+        "#16111F",
+        {
+          "type": "gradient",
+          "gradientType": "radial",
+          "enabled": true,
+          "rotation": 0,
+          "size": {
+            "width": 0.75,
+            "height": 1.4
+          },
+          "colors": [
+            {
+              "color": "#8A4DFF8C",
+              "position": 0
+            },
+            {
+              "color": "#8A4DFF00",
+              "position": 1
+            }
+          ],
+          "center": {
+            "x": 0.22,
+            "y": 0.55
+          }
+        },
+        {
+          "type": "gradient",
+          "gradientType": "radial",
+          "enabled": true,
+          "rotation": 0,
+          "size": {
+            "width": 0.8,
+            "height": 1.2
+          },
+          "colors": [
+            {
+              "color": "#ED158A73",
+              "position": 0
+            },
+            {
+              "color": "#ED158A00",
+              "position": 1
+            }
+          ],
+          "center": {
+            "x": 0.95,
+            "y": 1
+          }
+        }
+      ],
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "xs71F",
+          "x": 70,
+          "y": 95,
+          "name": "Cubo",
+          "width": 310,
+          "height": 310,
+          "layout": "none",
+          "children": [
+            {
+              "type": "path",
+              "id": "Z76fQ",
+              "x": 0,
+              "y": 0,
+              "name": "Cara superior",
+              "geometry": "M54 24l26 15-26 15-26-15z",
+              "viewBox": [
+                22,
+                22,
+                64,
+                64
+              ],
+              "fill": "#8A4DFF",
+              "width": 310,
+              "height": 310
+            },
+            {
+              "type": "path",
+              "id": "V95DPr",
+              "x": 0,
+              "y": 0,
+              "name": "Cara izquierda",
+              "geometry": "M28 39l26 15v30l-26-15z",
+              "viewBox": [
+                22,
+                22,
+                64,
+                64
+              ],
+              "fill": "#CD00EC",
+              "width": 310,
+              "height": 310
+            },
+            {
+              "type": "path",
+              "id": "vxAI0",
+              "x": 0,
+              "y": 0,
+              "name": "Cara derecha",
+              "geometry": "M80 39l-26 15v30l26-15z",
+              "viewBox": [
+                22,
+                22,
+                64,
+                64
+              ],
+              "fill": "#ED158A",
+              "width": 310,
+              "height": 310
+            },
+            {
+              "type": "path",
+              "id": "cYBwe",
+              "x": 0,
+              "y": 0,
+              "name": "Más",
+              "geometry": "M52.5 33.5l0 11a1.5 1.5 0 0 0 3 0l0-11a1.5 1.5 0 0 0-3 0z m-4 7l11 0a1.5 1.5 0 0 0 0-3l-11 0a1.5 1.5 0 0 0 0 3z",
+              "viewBox": [
+                22,
+                22,
+                64,
+                64
+              ],
+              "fill": "#FFFFFF",
+              "width": 310,
+              "height": 310
+            },
+            {
+              "type": "path",
+              "id": "RbHDo",
+              "x": 0,
+              "y": 0,
+              "name": "Por",
+              "geometry": "M34.93934 61.06066l8 8a1.5 1.5 0 0 0 2.12132-2.12132l-8-8a1.5 1.5 0 0 0-2.12132 2.12132z m8-2.12132l-8 8a1.5 1.5 0 0 0 2.12132 2.12132l8-8a1.5 1.5 0 0 0-2.12132-2.12132z",
+              "viewBox": [
+                22,
+                22,
+                64,
+                64
+              ],
+              "fill": "#FFFFFF",
+              "width": 310,
+              "height": 310
+            },
+            {
+              "type": "path",
+              "id": "A1bvG",
+              "x": 0,
+              "y": 0,
+              "name": "Igual",
+              "geometry": "M63.55709 61.89272l10-4a1.5 1.5 0 0 0-1.11418-2.78544l-10 4a1.5 1.5 0 0 0 1.11418 2.78544z m0 7l10-4a1.5 1.5 0 0 0-1.11418-2.78544l-10 4a1.5 1.5 0 0 0 1.11418 2.78544z",
+              "viewBox": [
+                22,
+                22,
+                64,
+                64
+              ],
+              "fill": "#FFFFFF",
+              "width": 310,
+              "height": 310
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "iwODy",
+          "x": 430,
+          "y": 122,
+          "name": "Texto",
+          "width": 480,
+          "layout": "vertical",
+          "gap": 14,
+          "children": [
+            {
+              "type": "text",
+              "id": "Y7vRl",
+              "name": "Título",
+              "fill": "#FFFFFF",
+              "content": "Compose Calculator",
+              "fontFamily": "Roboto Flex",
+              "fontSize": 54,
+              "fontWeight": "700",
+              "letterSpacing": -1
+            },
+            {
+              "type": "text",
+              "id": "IcnuK",
+              "name": "Frase",
+              "fill": "#CFBCFF",
+              "content": "Fast, private and ad-free",
+              "fontFamily": "Roboto Flex",
+              "fontSize": 30
+            },
+            {
+              "type": "frame",
+              "id": "iI1pU",
+              "name": "Teclas",
+              "gap": 18,
+              "padding": [
+                22,
+                0,
+                0,
+                0
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "rAjdr",
+                  "name": "Tecla número",
+                  "width": 92,
+                  "height": 92,
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "path",
+                      "id": "syw2q",
+                      "x": 0,
+                      "y": 0,
+                      "name": "Tecla número · Forma",
+                      "geometry": "M100 50l-0.07 2.62-0.2 2.61-0.35 2.59-0.47 2.58-0.61 2.54-0.75 2.51-0.87 2.47-1 2.42-1.13 2.36-1.25 2.3-1.37 2.23-1.48 2.16-1.59 2.08-1.7 1.99-1.8 1.9-1.9 1.8-1.99 1.7-2.08 1.59-2.16 1.48-2.23 1.37-2.3 1.25-2.36 1.13-2.42 1-2.47 0.87-2.51 0.75-2.54 0.61-2.58 0.47-2.59 0.35-2.61 0.2-2.62 0.07-2.62-0.07-2.61-0.2-2.59-0.35-2.58-0.47-2.54-0.61-2.51-0.75-2.47-0.87-2.42-1-2.36-1.13-2.3-1.25-2.23-1.37-2.16-1.48-2.08-1.59-1.99-1.7-1.9-1.8-1.8-1.9-1.7-1.99-1.59-2.08-1.48-2.16-1.37-2.23-1.25-2.3-1.13-2.36-1-2.42-0.87-2.47-0.75-2.51-0.61-2.54-0.47-2.58-0.35-2.59-0.2-2.61-0.07-2.62 0.07-2.62 0.2-2.61 0.35-2.59 0.47-2.58 0.61-2.54 0.75-2.51 0.87-2.47 1-2.42 1.13-2.36 1.25-2.3 1.37-2.23 1.48-2.16 1.59-2.08 1.7-1.99 1.8-1.9 1.9-1.8 1.99-1.7 2.08-1.59 2.16-1.48 2.23-1.37 2.3-1.25 2.36-1.13 2.42-1 2.47-0.87 2.51-0.75 2.54-0.61 2.58-0.47 2.59-0.35 2.61-0.2 2.62-0.07 2.62 0.07 2.61 0.2 2.59 0.35 2.58 0.47 2.54 0.61 2.51 0.75 2.47 0.87 2.42 1 2.36 1.13 2.3 1.25 2.23 1.37 2.16 1.48 2.08 1.59 1.99 1.7 1.9 1.8 1.8 1.9 1.7 1.99 1.59 2.08 1.48 2.16 1.37 2.23 1.25 2.3 1.13 2.36 1 2.42 0.87 2.47 0.75 2.51 0.61 2.54 0.47 2.58 0.35 2.59 0.2 2.61z",
+                      "viewBox": [
+                        0,
+                        0,
+                        100,
+                        100
+                      ],
+                      "fill": "#FFFFFF",
+                      "width": 92,
+                      "height": 92
+                    },
+                    {
+                      "type": "text",
+                      "id": "m9tdG",
+                      "x": 0,
+                      "y": -2,
+                      "name": "Tecla número · Etiqueta",
+                      "fill": "#1D1B20",
+                      "textGrowth": "fixed-width-height",
+                      "width": 92,
+                      "height": 92,
+                      "content": "7",
+                      "textAlign": "center",
+                      "textAlignVertical": "middle",
+                      "fontFamily": "Roboto Flex",
+                      "fontSize": 40,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Flbb3",
+                  "name": "Tecla activa",
+                  "width": 92,
+                  "height": 92,
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "path",
+                      "id": "k72KR",
+                      "x": 0,
+                      "y": 0,
+                      "name": "Tecla activa · Forma",
+                      "geometry": "M100 50l-0.37 2.6-1.06 2.51-1.57 2.33-1.87 2.15-1.9 1.99-1.7 1.91-1.31 1.95-0.87 2.08-0.44 2.31-0.16 2.55-0.06 2.75-0.2 2.84-0.53 2.77-1.03 2.51-1.57 2.11-2.11 1.57-2.51 1.03-2.77 0.53-2.84 0.2-2.75 0.06-2.55 0.16-2.31 0.44-2.08 0.87-1.95 1.31-1.91 1.7-1.99 1.9-2.15 1.87-2.33 1.57-2.51 1.06-2.6 0.37-2.6-0.37-2.51-1.06-2.33-1.57-2.15-1.87-1.99-1.9-1.91-1.7-1.95-1.31-2.08-0.87-2.31-0.44-2.54-0.16-2.76-0.06-2.84-0.2-2.77-0.53-2.51-1.03-2.11-1.57-1.57-2.11-1.03-2.51-0.53-2.77-0.2-2.84-0.06-2.75-0.16-2.55-0.44-2.31-0.87-2.08-1.31-1.95-1.7-1.91-1.9-1.99-1.87-2.15-1.57-2.33-1.06-2.51-0.37-2.6 0.37-2.6 1.06-2.51 1.57-2.33 1.87-2.15 1.9-1.99 1.7-1.91 1.31-1.95 0.87-2.08 0.44-2.31 0.16-2.54 0.06-2.76 0.2-2.84 0.53-2.77 1.03-2.51 1.57-2.11 2.11-1.57 2.51-1.03 2.77-0.53 2.84-0.2 2.75-0.06 2.55-0.16 2.31-0.44 2.08-0.87 1.95-1.31 1.91-1.7 1.99-1.9 2.15-1.87 2.33-1.57 2.51-1.06 2.6-0.37 2.6 0.37 2.51 1.06 2.33 1.57 2.15 1.87 1.99 1.9 1.91 1.7 1.95 1.31 2.08 0.87 2.31 0.44 2.55 0.16 2.75 0.06 2.84 0.2 2.77 0.53 2.51 1.03 2.11 1.57 1.57 2.11 1.03 2.51 0.53 2.77 0.2 2.84 0.06 2.76 0.16 2.54 0.44 2.31 0.87 2.08 1.31 1.95 1.7 1.91 1.9 1.99 1.87 2.15 1.57 2.33 1.06 2.51z",
+                      "viewBox": [
+                        0,
+                        0,
+                        100,
+                        100
+                      ],
+                      "fill": "#6E3BDB",
+                      "width": 92,
+                      "height": 92
+                    },
+                    {
+                      "type": "text",
+                      "id": "z5OUx",
+                      "x": 0,
+                      "y": -6,
+                      "name": "Tecla activa · Etiqueta",
+                      "fill": "#FFFFFF",
+                      "textGrowth": "fixed-width-height",
+                      "width": 92,
+                      "height": 92,
+                      "content": "+",
+                      "textAlign": "center",
+                      "textAlignVertical": "middle",
+                      "fontFamily": "Roboto Flex",
+                      "fontSize": 64,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ZoQ2V",
+                  "name": "Tecla igual",
+                  "width": 92,
+                  "height": 92,
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "path",
+                      "id": "vcS0T",
+                      "x": 0,
+                      "y": 0,
+                      "name": "Tecla igual · Forma",
+                      "geometry": "M100 50l0 2.62 0 2.63-0.02 2.67-0.03 2.7-0.07 2.75-0.12 2.8-0.19 2.86-0.3 2.91-0.43 2.94-0.61 2.97-0.82 2.94-1.09 2.86-1.38 2.74-1.69 2.55-2.01 2.3-2.3 2.01-2.55 1.69-2.74 1.38-2.86 1.09-2.94 0.82-2.97 0.61-2.94 0.43-2.91 0.3-2.86 0.19-2.8 0.12-2.75 0.07-2.7 0.03-2.67 0.02-2.63 0-2.62 0-2.62 0-2.63 0-2.67-0.02-2.7-0.03-2.75-0.07-2.8-0.12-2.86-0.19-2.91-0.3-2.94-0.43-2.97-0.61-2.94-0.82-2.86-1.09-2.74-1.38-2.55-1.69-2.3-2.01-2.01-2.3-1.69-2.55-1.38-2.74-1.09-2.86-0.82-2.94-0.61-2.97-0.43-2.94-0.3-2.91-0.19-2.86-0.12-2.8-0.07-2.75-0.03-2.7-0.02-2.67 0-2.63 0-2.62 0-2.62 0-2.63 0.02-2.67 0.03-2.7 0.07-2.75 0.12-2.8 0.19-2.86 0.3-2.91 0.43-2.94 0.61-2.97 0.82-2.94 1.09-2.86 1.38-2.74 1.69-2.55 2.01-2.3 2.3-2.01 2.55-1.69 2.74-1.38 2.86-1.09 2.94-0.82 2.97-0.61 2.94-0.43 2.91-0.3 2.86-0.19 2.8-0.12 2.75-0.07 2.7-0.03 2.67-0.02 2.63 0 2.62 0 2.62 0 2.63 0 2.67 0.02 2.7 0.03 2.75 0.07 2.8 0.12 2.86 0.19 2.91 0.3 2.94 0.43 2.97 0.61 2.94 0.82 2.86 1.09 2.74 1.38 2.55 1.69 2.3 2.01 2.01 2.3 1.69 2.55 1.38 2.74 1.09 2.86 0.82 2.94 0.61 2.97 0.43 2.94 0.3 2.91 0.19 2.86 0.12 2.8 0.07 2.75 0.03 2.7 0.02 2.67 0 2.63z",
+                      "viewBox": [
+                        0,
+                        0,
+                        100,
+                        100
+                      ],
+                      "fill": "#ED158A",
+                      "width": 92,
+                      "height": 92
+                    },
+                    {
+                      "type": "text",
+                      "id": "lJTK8",
+                      "x": 0,
+                      "y": -6,
+                      "name": "Tecla igual · Etiqueta",
+                      "fill": "#FFFFFF",
+                      "textGrowth": "fixed-width-height",
+                      "width": 92,
+                      "height": 92,
+                      "content": "=",
+                      "textAlign": "center",
+                      "textAlignVertical": "middle",
+                      "fontFamily": "Roboto Flex",
+                      "fontSize": 64,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "fileToken": "19b02623-bff6-457a-9c3f-0bba7345f733"

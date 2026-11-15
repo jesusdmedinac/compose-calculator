@@ -1,4 +1,6 @@
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![App Store](https://img.shields.io/badge/App_Store-iOS%2026-black?style=flat&logo=apple&logoColor=white)](https://apps.apple.com/app/id6830056185)
+[![Google Play](https://img.shields.io/badge/Google_Play-Android-black?style=flat&logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=com.jesusdmedinac.compose.calculator)
 
 # Compose Calculator
 
@@ -7,9 +9,23 @@ code, and each platform gets a fully native UI: **Material 3 Expressive** in Jet
 Android, and **Liquid Glass** in SwiftUI on iOS.
 
 <p>
-  <img src="readme_images/android_material_expressive.png" alt="Android app with Material 3 Expressive keys and the active operator shown as a cookie shape" height="520">
+  <a href="https://play.google.com/store/apps/details?id=com.jesusdmedinac.compose.calculator">
+    <img src="readme_images/android_material_expressive.png" alt="Android app with Material 3 Expressive keys and the active operator shown as a cookie shape" height="520">
+  </a>
   &nbsp;
-  <img src="readme_images/ios_liquid_glass.png" alt="iPhone app with Liquid Glass keys over a violet and magenta gradient" height="520">
+  <a href="https://apps.apple.com/app/id6830056185">
+    <img src="readme_images/ios_liquid_glass.png" alt="iPhone app with Liquid Glass keys over a violet and magenta gradient" height="520">
+  </a>
+</p>
+
+<p>
+  <a href="https://apps.apple.com/app/id6830056185">
+    <img src="https://img.shields.io/badge/Download_on_the-App_Store-black?style=for-the-badge&logo=apple&logoColor=white" alt="Download on the App Store" height="40">
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://play.google.com/store/apps/details?id=com.jesusdmedinac.compose.calculator">
+    <img src="https://img.shields.io/badge/Get_it_on-Google_Play-black?style=for-the-badge&logo=google-play&logoColor=white" alt="Get it on Google Play" height="40">
+  </a>
 </p>
 
 ## Features

@@ -46,4 +46,26 @@ platform :android do
     )
     upload_to_play_store(track: 'internal')
   end
+
+  desc "Captures the Play Store phone screenshots on a connected device or emulator (serial:<adb serial> picks one)"
+  lane :screenshots do |options|
+    serial = options[:serial]
+    adb_args = serial ? { serial: serial } : {}
+    gradle(tasks: ["assembleDebug", "assembleDebugAndroidTest"])
+    # Play rejects screenshots whose long side is more than twice the short side,
+    # so capture at 1080x1920 (9:16) and then put back whatever the device had.
+    override = ->(output) { output[/Override \w+: (\S+)/, 1] || "reset" }
+    original_size = override.call(adb(command: "shell wm size", **adb_args))
+    original_density = override.call(adb(command: "shell wm density", **adb_args))
+    original_night = adb(command: "shell cmd uimode night", **adb_args)[/Night mode: (\w+)/, 1] || "no"
+    adb(command: "shell wm size 1080x1920", **adb_args)
+    adb(command: "shell wm density 420", **adb_args)
+    begin
+      capture_android_screenshots(specific_device: serial)
+    ensure
+      adb(command: "shell wm size #{original_size}", **adb_args)
+      adb(command: "shell wm density #{original_density}", **adb_args)
+      adb(command: "shell cmd uimode night #{original_night}", **adb_args)
+    end
+  end
 end

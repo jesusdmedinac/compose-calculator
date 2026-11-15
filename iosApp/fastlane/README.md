@@ -15,13 +15,21 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 ## iOS
 
-### ios custom_lane
+### ios screenshots
 
 ```sh
-[bundle exec] fastlane ios custom_lane
+[bundle exec] fastlane ios screenshots
 ```
 
-Description of what the lane does
+Captures the App Store screenshots on a connected iPhone (udid:<device id>)
+
+### ios export_screenshots
+
+```sh
+[bundle exec] fastlane ios export_screenshots
+```
+
+Exports the screenshots from the last `screenshots` run in every App Store size
 
 ----
 

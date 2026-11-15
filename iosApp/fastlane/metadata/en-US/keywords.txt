@@ -1,0 +1,1 @@
+calculator,math,add,subtract,multiply,divide,arithmetic,simple,offline,no ads,private

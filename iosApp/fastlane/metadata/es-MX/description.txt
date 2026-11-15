@@ -1,0 +1,13 @@
+Una calculadora directa, rápida y sin distracciones, diseñada para iPhone.
+
+Botones de vidrio Liquid Glass que reaccionan a tu toque, números que ruedan al cambiar y un fondo con los colores de la app. Todo sin anuncios, sin cuentas y sin conexión a internet.
+
+• Sin publicidad ni registros: abres la app y calculas.
+• 100 % offline y privada: no pide acceso a tus contactos, ubicación, fotos ni archivos. Todo se calcula en tu iPhone.
+• Precisión decimal exacta: evita los errores de redondeo típicos, como 0.1 + 0.2.
+• Lo esencial: suma, resta, multiplicación, división, paréntesis automáticos y borrado paso a paso.
+• Tu último cálculo siempre a la vista.
+
+Código abierto
+Compose Calculator está hecha con Kotlin Multiplatform y SwiftUI. El código es abierto y lo puedes revisar en GitHub:
+https://github.com/jesusdmedinac/compose-calculator

@@ -1,0 +1,1 @@
+calculadora,cuentas,sumar,restar,multiplicar,dividir,matemáticas,sin anuncios,offline,simple

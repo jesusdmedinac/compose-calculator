@@ -1,16 +1,23 @@
 package com.jesusdmedinac.compose.calculator.ui.model
 
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.setValue
 import com.github.keelar.exprk.ExpressionException
 import com.github.keelar.exprk.Expressions
 import com.ionspin.kotlin.bignum.decimal.BigDecimal
 import com.ionspin.kotlin.bignum.decimal.RoundingMode
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
+
+/**
+ * Significant digits kept by every result. Enough for any integer a person types
+ * on a phone, while still rounding repeating decimals such as 1÷3.
+ */
+private const val RESULT_PRECISION = 20L
 
 class CalculatorEngine {
-    var state: CalculatorState by mutableStateOf(CalculatorState())
-        private set
+    private val _state = MutableStateFlow(CalculatorState())
+    val state: StateFlow<CalculatorState> = _state.asStateFlow()
 
     fun onKeypadClicked(keypad: Keypad) {
         when (keypad.type) {
@@ -26,8 +33,7 @@ class CalculatorEngine {
     }
 
     private fun numberOperatorOrDecimalClicked(keypad: Keypad) {
-        state.update {
-            println("it.displayedCalculation: ${it.displayedCalculation}")
+        _state.update {
             val displayedCalculation = with(it.displayedCalculation) {
                 this + when {
                     keypad == Keypad.PARENTHESIS &&
@@ -44,11 +50,11 @@ class CalculatorEngine {
                     else -> keypad.label
                 }
             }
-            println("displayedCalculation: $displayedCalculation")
             val result = calculateResult(displayedCalculation)
             it.copy(
                 displayedCalculation = displayedCalculation,
                 displayedResult = result.toStringExpanded(),
+                operation = keypad.operation,
             )
         }
     }
@@ -58,36 +64,41 @@ class CalculatorEngine {
     private fun String.lastCharIsNumber() = lastOrNull()?.isDigit() == true
 
     private fun clearClicked() {
-        state.update { CalculatorState() }
+        _state.update { CalculatorState(lastCalculation = it.lastCalculation) }
     }
 
-    private fun calculateResult(expression: String): BigDecimal = run {
+    private fun calculateResult(displayedExpression: String): BigDecimal = run {
+        val expression = Keypad.values().fold(displayedExpression) { acc, keypad ->
+            if (keypad.operation == Operation.NONE) acc else acc.replace(keypad.label, keypad.value)
+        }
         if (expression.isEmpty()) {
             return@run BigDecimal.ZERO
         }
         var useExpression = expression
         if (expression.endsWith(".")) {
+            // "5." previews as 5, while a lone "." (as in "5+.") previews as 0.
             useExpression = expression.dropLast(1)
-            useExpression += "0."
+            if (useExpression.lastOrNull()?.isDigit() != true) {
+                useExpression += "0"
+            }
         }
         if (expression.endsWith("/") ||
             expression.endsWith("*") ||
             expression.endsWith("+") ||
-            expression.endsWith("-") ||
-            expression.endsWith("%")
+            expression.endsWith("-")
         ) {
             useExpression = expression.dropLast(1)
         }
         try {
             Expressions()
-                .setPrecision(10)
+                .setPrecision(RESULT_PRECISION)
                 .setRoundingMode(RoundingMode.ROUND_HALF_AWAY_FROM_ZERO)
                 .eval(useExpression)
         } catch (e: ExpressionException) {
             if (e.message?.startsWith("Expected end of expression") == true) {
                 useExpression += ")"
                 Expressions()
-                    .setPrecision(10)
+                    .setPrecision(RESULT_PRECISION)
                     .setRoundingMode(RoundingMode.ROUND_HALF_AWAY_FROM_ZERO)
                     .eval(useExpression)
             } else {
@@ -97,18 +108,23 @@ class CalculatorEngine {
     }
 
     private fun equalsClicked() {
-        state.update {
-            val result = calculateResult(it.displayedCalculation)
+        _state.update {
+            if (it.displayedCalculation.isEmpty()) {
+                return@update it
+            }
+            val result = calculateResult(it.displayedCalculation).toStringExpanded()
 
             it.copy(
-                displayedCalculation = result.toStringExpanded(),
+                displayedCalculation = result,
                 displayedResult = "",
+                operation = Operation.NONE,
+                lastCalculation = "${it.displayedCalculation} = $result",
             )
         }
     }
 
     private fun undoClicked() {
-        state.update {
+        _state.update {
             if (it.displayedCalculation.isEmpty()) {
                 return@update it
             }
@@ -117,14 +133,9 @@ class CalculatorEngine {
             it.copy(
                 displayedCalculation = displayedCalculation,
                 displayedResult = result.toStringExpanded(),
+                operation = Operation.NONE,
             )
         }
-    }
-
-    private fun CalculatorState.update(
-        reducer: (CalculatorState) -> CalculatorState,
-    ) {
-        state = reducer(this)
     }
 }
 
@@ -132,6 +143,7 @@ data class CalculatorState(
     val displayedCalculation: String = "",
     val displayedResult: String = "",
     val operation: Operation = Operation.NONE,
+    val lastCalculation: String = "",
 )
 
 enum class Operation {

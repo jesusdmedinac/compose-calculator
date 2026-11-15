@@ -1,1 +1,18 @@
-ComposeCalculator es una calculadora creada utilizando MAD. Además, Compose Multiplatform permite compilar la app en múltiples plataformas.
+Una calculadora directa, rápida y sin distracciones.
+
+Diseñada para hacer cuentas del día a día sin tener que lidiar con publicidad intrusiva, pantallas de carga lentas ni permisos innecesarios.
+
+¿Por qué usar Compose Calculator?
+
+• Cero publicidad y sin registros: No hay anuncios que tapen tus cálculos ni cuentas que crear. Abres la app y calculas.
+• 100% offline y privada: No pide acceso a tus contactos, ubicación, fotos ni almacenamiento. Todo se procesa en la memoria de tu dispositivo.
+• Precisión matemática real: A diferencia de otras calculadoras que fallan en redondeos comunes (como 0.1 + 0.2), aquí los números se procesan con aritmética decimal exacta.
+• Interfaz limpia y cómoda: Botones grandes y legibles construidos con Material You (Material 3) que se adaptan al tema oscuro de tu teléfono y aprovechan toda la pantalla.
+• Funciones esenciales: Suma, resta, multiplicación, división, porcentajes, paréntesis balanceados automáticos y borrado paso a paso.
+• Ligera: Pesa muy poco y no consume batería en segundo plano.
+
+Código abierto y transparente
+Compose Calculator está construida con Kotlin Multiplatform y Compose Multiplatform. El código fuente es abierto y auditable en GitHub.
+
+Si tienes comentarios o sugerencias de mejora, puedes escribir directamente a jesus.daniel.medina.cruz@gmail.com o abrir un reporte en el repositorio:
+https://github.com/jesusdmedinac/compose-calculator

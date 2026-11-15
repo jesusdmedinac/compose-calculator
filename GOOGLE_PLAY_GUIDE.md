@@ -26,11 +26,13 @@ Este documento recopila el conocimiento técnico, normativo y operativo aprendid
   - `1000004`: Lanzado en Prueba cerrada - Alpha (24 oct 2023)
   - `1000007`: Lanzado en Prueba interna (24 oct 2023)
   - `1000008`: Nueva versión compilada para Android 16 (API 36)
+  - `1000009`: Material 3 Expressive en Android y Liquid Glass en iOS (1.1.0)
+  - `1000010`: Lanzamiento 1.1.0 con soporte de screenshots para tiendas y ajustes de display
 - **Configuración en `build.gradle.kts`:**
   ```kotlin
   defaultConfig {
-      versionCode = 1000008 // Mayor que 1000007
-      versionName = "1.0.1"
+      versionCode = 1000010 // Mayor que 1000009
+      versionName = "1.1.0"
   }
   ```
 
@@ -51,7 +53,7 @@ Este documento recopila el conocimiento técnico, normativo y operativo aprendid
   1. Archivo físico y tamaño.
   2. Nombre de paquete (`com.jesusdmedinac.compose.calculator`).
   3. `targetSdkVersion = 36` (Android 16).
-  4. `versionCode = 1000008` y `versionName = 1.0.1`.
+  4. `versionCode = 1000010` y `versionName = 1.1.0`.
   5. `minSdkVersion = 24`.
   6. Firma JAR y huella SHA-256 (`6B:C7:A1...`) a nombre de Jesús Daniel Medina Cruz.
 

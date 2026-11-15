@@ -49,6 +49,14 @@ internal class UnaryExpr(
     }
 }
 
+/** A postfix percentage such as `20%`. */
+internal class PercentExpr(val operand: Expr) : Expr() {
+
+    override fun <R> accept(visitor: ExprVisitor<R>): R {
+        return visitor.visitPercentExpr(this)
+    }
+}
+
 internal class CallExpr(
     val name: String,
     val arguments: List<Expr>,
@@ -89,6 +97,8 @@ internal interface ExprVisitor<out R> {
     fun visitBinaryExpr(expr: BinaryExpr): R
 
     fun visitUnaryExpr(expr: UnaryExpr): R
+
+    fun visitPercentExpr(expr: PercentExpr): R
 
     fun visitCallExpr(expr: CallExpr): R
 

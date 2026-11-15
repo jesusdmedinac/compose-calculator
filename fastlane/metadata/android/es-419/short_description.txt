@@ -1,1 +1,1 @@
-Una aplicación para demostrar el poder de compose multiplatform
+Calculadora rápida, limpia y sin anuncios. Funciona sin internet ni rastreo.

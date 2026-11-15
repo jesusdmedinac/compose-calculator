@@ -1,0 +1,5 @@
+New Material 3 Expressive design:
+• New icon and violet and magenta colors, with dark mode.
+• Expressive key shapes and springy animations.
+• Result digits roll as they change, and your last calculation is shown.
+• Fixed: division (÷) now returns the correct result.

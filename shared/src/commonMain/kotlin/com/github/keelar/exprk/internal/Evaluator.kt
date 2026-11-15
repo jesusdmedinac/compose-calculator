@@ -10,7 +10,6 @@ import com.github.keelar.exprk.internal.TokenType.GREATER_EQUAL
 import com.github.keelar.exprk.internal.TokenType.LESS
 import com.github.keelar.exprk.internal.TokenType.LESS_EQUAL
 import com.github.keelar.exprk.internal.TokenType.MINUS
-import com.github.keelar.exprk.internal.TokenType.MODULO
 import com.github.keelar.exprk.internal.TokenType.NOT_EQUAL
 import com.github.keelar.exprk.internal.TokenType.PLUS
 import com.github.keelar.exprk.internal.TokenType.SLASH
@@ -69,14 +68,18 @@ internal class Evaluator() : ExprVisitor<BigDecimal> {
 
     override fun visitBinaryExpr(expr: BinaryExpr): BigDecimal {
         val left = eval(expr.left)
-        val right = eval(expr.right)
+        var right = eval(expr.right)
+
+        // Adding or subtracting a percentage takes it of the left side: 50+20% is 60.
+        if (expr.right is PercentExpr && (expr.operator.type == PLUS || expr.operator.type == MINUS)) {
+            right = left.multiply(right, decimalMode)
+        }
 
         return when (expr.operator.type) {
             PLUS -> left + right
             MINUS -> left - right
             STAR -> left * right
             SLASH -> left.divide(right, decimalMode)
-            MODULO -> left.remainder(right)
             EXPONENT -> left pow right
             EQUAL_EQUAL -> (left == right).toBigDecimal()
             NOT_EQUAL -> (left != right).toBigDecimal()
@@ -104,6 +107,10 @@ internal class Evaluator() : ExprVisitor<BigDecimal> {
 
             else -> throw ExpressionException("Invalid unary operator")
         }
+    }
+
+    override fun visitPercentExpr(expr: PercentExpr): BigDecimal {
+        return eval(expr.operand).divide(BigDecimal.fromInt(100), decimalMode)
     }
 
     override fun visitCallExpr(expr: CallExpr): BigDecimal {
